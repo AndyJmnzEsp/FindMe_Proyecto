@@ -1,0 +1,196 @@
+<?xml version="1.0" encoding="utf-8"?>
+<androidx.constraintlayout.widget.ConstraintLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:app="http://schemas.android.com/apk/res-auto"
+    xmlns:tools="http://schemas.android.com/tools"
+    android:layout_width="match_parent"
+    android:layout_height="match_parent"
+    android:background="#FFFF"
+    android:orientation="vertical">
+
+    <ImageView
+        android:layout_width="wrap_content"
+        android:layout_height="409dp"
+        android:layout_marginBottom="344dp"
+        android:src="@drawable/img_iniciar_sesion1"
+        app:layout_constraintBottom_toBottomOf="@+id/constraintLayout2"
+        app:layout_constraintEnd_toEndOf="parent"
+        app:layout_constraintHorizontal_bias="0.0"
+        app:layout_constraintStart_toStartOf="parent" />
+
+    <androidx.constraintlayout.widget.ConstraintLayout
+        android:id="@+id/constraintLayout2"
+        android:layout_width="match_parent"
+        android:layout_height="489dp"
+        android:layout_marginTop="244dp"
+        android:background="@drawable/custom_view"
+        app:layout_constraintEnd_toEndOf="parent"
+        app:layout_constraintHorizontal_bias="0.0"
+        app:layout_constraintStart_toStartOf="parent"
+        app:layout_constraintTop_toTopOf="parent">
+
+        <TextView
+            android:id="@+id/textWelcome"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:fontFamily="@font/verdana"
+            android:text="Registro"
+            android:textColor="#7246C5"
+            android:textSize="25dp"
+            app:layout_constraintBottom_toBottomOf="parent"
+            app:layout_constraintEnd_toEndOf="parent"
+            app:layout_constraintStart_toStartOf="parent"
+            app:layout_constraintTop_toTopOf="parent"
+            app:layout_constraintVertical_bias="0.068" />
+
+        <TextView
+            android:id="@+id/textView2"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:fontFamily="@font/verdana"
+            android:text="Nombre del Usuario"
+            android:textColor="#5F27C6"
+            android:textSize="12dp"
+            app:layout_constraintBottom_toBottomOf="parent"
+            app:layout_constraintEnd_toEndOf="parent"
+            app:layout_constraintHorizontal_bias="0.148"
+            app:layout_constraintStart_toStartOf="parent"
+            app:layout_constraintTop_toTopOf="parent"
+            app:layout_constraintVertical_bias="0.188" />
+
+        <EditText
+            android:id="@+id/editText"
+            android:layout_width="325dp"
+            android:layout_height="46dp"
+            android:fontFamily="@font/verdana"
+            android:textColor="#707070"
+            android:textCursorDrawable="@null"
+            android:textSize="18dp"
+            app:layout_constraintBottom_toBottomOf="parent"
+            app:layout_constraintEnd_toEndOf="parent"
+            app:layout_constraintStart_toStartOf="parent"
+            app:layout_constraintTop_toTopOf="parent"
+            app:layout_constraintVertical_bias="0.257" />
+
+        <TextView
+            android:id="@+id/pass"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:fontFamily="@font/verdana"
+            android:text="Constraseña"
+            android:textColor="#5F27C6"
+            android:textSize="12dp"
+            app:layout_constraintBottom_toBottomOf="parent"
+            app:layout_constraintEnd_toEndOf="parent"
+            app:layout_constraintHorizontal_bias="0.127"
+            app:layout_constraintStart_toStartOf="parent"
+            app:layout_constraintTop_toTopOf="parent"
+            app:layout_constraintVertical_bias="0.364" />
+
+
+        <com.google.android.material.textfield.TextInputLayout
+            android:id="@+id/passwordLayout"
+            android:layout_width="325dp"
+            android:layout_height="50dp"
+            android:scrollbarSize="18dp"
+            app:layout_constraintBottom_toBottomOf="parent"
+            app:layout_constraintLeft_toLeftOf="parent"
+            app:layout_constraintRight_toRightOf="parent"
+            app:layout_constraintTop_toTopOf="parent"
+            app:layout_constraintVertical_bias="0.448"
+            app:layout_constraintHorizontal_bias=".500"
+            app:passwordToggleEnabled="true"
+            app:passwordToggleTint="#707070"        >
+
+            <com.google.android.material.textfield.TextInputEditText
+                android:layout_width="match_parent"
+                android:layout_height="30dp"
+                android:background="@drawable/custom_edit_text"
+                android:ems="15"
+                android:inputType="textPassword"
+                android:textColor="#707070"
+                android:textSize="18dp"
+                android:paddingStart="8dp"/>
+
+        </com.google.android.material.textfield.TextInputLayout>
+
+        <TextView
+            android:id="@+id/pass2"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:fontFamily="@font/verdana"
+            android:text="Constraseña"
+            android:textColor="#5F27C6"
+            android:textSize="12dp"
+            app:layout_constraintBottom_toBottomOf="parent"
+            app:layout_constraintEnd_toEndOf="parent"
+            app:layout_constraintHorizontal_bias="0.127"
+            app:layout_constraintStart_toStartOf="parent"
+            app:layout_constraintTop_toTopOf="parent"
+            app:layout_constraintVertical_bias="0.544" />
+
+
+        <com.google.android.material.textfield.TextInputLayout
+            android:id="@+id/passwordLayout2"
+            android:layout_width="325dp"
+            android:layout_height="51dp"
+            android:scrollbarSize="18dp"
+            app:layout_constraintBottom_toBottomOf="parent"
+            app:layout_constraintLeft_toLeftOf="parent"
+            app:layout_constraintRight_toRightOf="parent"
+            app:layout_constraintTop_toTopOf="parent"
+            app:layout_constraintVertical_bias="0.646"
+            app:layout_constraintHorizontal_bias=".500"
+            app:passwordToggleEnabled="true"
+            app:passwordToggleTint="#707070">
+
+            <com.google.android.material.textfield.TextInputEditText
+                android:layout_width="325dp"
+                android:layout_height="30dp"
+                android:background="@drawable/custom_edit_text"
+                android:ems="15"
+                android:inputType="textPassword"
+                android:textColor="#707070"
+                android:textSize="18dp"
+                android:paddingStart="8dp"/>
+
+        </com.google.android.material.textfield.TextInputLayout>
+
+        <Button
+            android:id="@+id/CrearCuenta"
+            android:layout_width="240dp"
+            android:layout_height="49dp"
+            android:background="@drawable/custom_button_orange"
+            android:fontFamily="@font/verdana"
+            android:text="Crear Cuenta"
+            android:textAllCaps="false"
+            android:textColor="#FFFF"
+            android:textSize="18dp"
+            android:textStyle="bold"
+            app:layout_constraintBottom_toBottomOf="parent"
+            app:layout_constraintEnd_toEndOf="parent"
+            app:layout_constraintHorizontal_bias="0.497"
+            app:layout_constraintStart_toStartOf="parent"
+            app:layout_constraintTop_toTopOf="parent"
+            app:layout_constraintVertical_bias="0.818"
+            android:onClick="checkIn"/>
+
+        <Button
+            android:id="@+id/SinCuentaL"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:background="@drawable/custom_button_bordeswhite"
+            android:fontFamily="@font/verdana"
+            android:text="Ya tengo una cuenta"
+            android:textAllCaps="false"
+            android:textColor="#A488D8"
+            android:textSize="12dp"
+            android:textStyle="bold"
+            app:layout_constraintBottom_toBottomOf="parent"
+            app:layout_constraintEnd_toEndOf="parent"
+            app:layout_constraintStart_toStartOf="parent"
+            app:layout_constraintTop_toTopOf="parent"
+            app:layout_constraintVertical_bias="0.963" />
+
+    </androidx.constraintlayout.widget.ConstraintLayout>
+
+</androidx.constraintlayout.widget.ConstraintLayout>

@@ -1,0 +1,135 @@
+<?xml version="1.0" encoding="utf-8"?>
+<androidx.constraintlayout.widget.ConstraintLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:app="http://schemas.android.com/apk/res-auto"
+    xmlns:tools="http://schemas.android.com/tools"
+    android:layout_width="match_parent"
+    android:layout_height="match_parent"
+    android:background="#FFFF"
+    android:orientation="vertical">
+
+    <ImageView
+        android:layout_width="wrap_content"
+        android:layout_height="409dp"
+        android:layout_marginBottom="344dp"
+        android:src="@drawable/img_iniciar_sesion1"
+        app:layout_constraintBottom_toBottomOf="@+id/constraintLayout2"
+        app:layout_constraintEnd_toEndOf="parent"
+        app:layout_constraintHorizontal_bias="0.0"
+        app:layout_constraintStart_toStartOf="parent" />
+
+    <androidx.constraintlayout.widget.ConstraintLayout
+        android:id="@+id/constraintLayout2"
+        android:layout_width="match_parent"
+        android:layout_height="489dp"
+        android:layout_marginTop="244dp"
+        android:background="@drawable/custom_view"
+        app:layout_constraintEnd_toEndOf="parent"
+        app:layout_constraintHorizontal_bias="0.0"
+        app:layout_constraintStart_toStartOf="parent"
+        app:layout_constraintTop_toTopOf="parent">
+
+        <TextView
+            android:id="@+id/textWelcome"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:fontFamily="@font/verdana"
+            android:text="¡Bienvenido!"
+            android:textColor="#7246C5"
+            android:textSize="25dp"
+            app:layout_constraintBottom_toBottomOf="parent"
+            app:layout_constraintEnd_toEndOf="parent"
+            app:layout_constraintStart_toStartOf="parent"
+            app:layout_constraintTop_toTopOf="parent"
+            app:layout_constraintVertical_bias="0.068" />
+
+        <TextView
+            android:id="@+id/text4"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:fontFamily="@font/verdana"
+            android:text="¿Comó deseas registrarte?"
+            android:textColor="#7246C5"
+            android:textSize="20dp"
+            app:layout_constraintBottom_toBottomOf="parent"
+            app:layout_constraintEnd_toEndOf="parent"
+            app:layout_constraintStart_toStartOf="parent"
+            app:layout_constraintTop_toTopOf="parent"
+            app:layout_constraintVertical_bias="0.182" />
+        <Button
+            android:id="@+id/UEstandar"
+            android:layout_width="240dp"
+            android:layout_height="49dp"
+            android:background="@drawable/custom_button_orange"
+            android:fontFamily="@font/verdana"
+            android:text="Usuario Estandar"
+            android:textAllCaps="false"
+            android:textColor="#FFFF"
+            android:textSize="18dp"
+            android:textStyle="bold"
+            app:layout_constraintBottom_toBottomOf="parent"
+            app:layout_constraintEnd_toEndOf="parent"
+            app:layout_constraintHorizontal_bias="0.497"
+            app:layout_constraintStart_toStartOf="parent"
+            app:layout_constraintTop_toTopOf="parent"
+            app:layout_constraintVertical_bias="0.361"
+            android:onClick="RegistroEstandar"/>
+
+        <Button
+            android:id="@+id/Psicologo"
+            android:layout_width="240dp"
+            android:layout_height="49dp"
+            android:background="@drawable/custom_button_orange"
+            android:fontFamily="@font/verdana"
+            android:text="Psicólogo"
+            android:textAllCaps="false"
+            android:textColor="#FFFF"
+            android:textSize="18dp"
+            android:textStyle="bold"
+            app:layout_constraintBottom_toBottomOf="parent"
+            app:layout_constraintEnd_toEndOf="parent"
+            app:layout_constraintHorizontal_bias="0.497"
+            app:layout_constraintStart_toStartOf="parent"
+            app:layout_constraintTop_toTopOf="parent"
+            app:layout_constraintVertical_bias="0.52"
+            android:onClick="RegistroPsicologo"/>
+
+        <Button
+            android:id="@+id/Admin"
+            android:layout_width="240dp"
+            android:layout_height="49dp"
+            android:background="@drawable/custom_button_orange"
+            android:fontFamily="@font/verdana"
+            android:text="Administrador"
+            android:textAllCaps="false"
+            android:textColor="#FFFF"
+            android:textSize="18dp"
+            android:textStyle="bold"
+            app:layout_constraintBottom_toBottomOf="parent"
+            app:layout_constraintEnd_toEndOf="parent"
+            app:layout_constraintHorizontal_bias="0.497"
+            app:layout_constraintStart_toStartOf="parent"
+            app:layout_constraintTop_toTopOf="parent"
+            app:layout_constraintVertical_bias="0.693"
+            android:onClick="RegistroAdmin"/>
+
+        <Button
+            android:id="@+id/ConCuentaS"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:background="@drawable/custom_button_bordeswhite"
+            android:fontFamily="@font/verdana"
+            android:text="Ya tengo una cuenta"
+            android:textStyle="bold"
+            android:textAllCaps="false"
+            android:textColor="#A488D8"
+            android:textSize="12dp"
+            app:layout_constraintBottom_toBottomOf="parent"
+            app:layout_constraintEnd_toEndOf="parent"
+            app:layout_constraintHorizontal_bias="0.498"
+            app:layout_constraintStart_toStartOf="parent"
+            app:layout_constraintTop_toTopOf="parent"
+            app:layout_constraintVertical_bias="0.929" />
+
+    </androidx.constraintlayout.widget.ConstraintLayout>
+
+</androidx.constraintlayout.widget.ConstraintLayout>

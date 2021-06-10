@@ -1,0 +1,243 @@
+<?xml version="1.0" encoding="utf-8"?>
+<androidx.constraintlayout.widget.ConstraintLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:app="http://schemas.android.com/apk/res-auto"
+    xmlns:tools="http://schemas.android.com/tools"
+    android:layout_width="match_parent"
+    android:layout_height="match_parent"
+    android:background="#FFFF"
+    android:orientation="vertical">
+
+    <ImageView
+        android:layout_width="412dp"
+        android:layout_height="431dp"
+        android:layout_marginBottom="344dp"
+        android:src="@drawable/img_iniciar_sesion_2"
+        app:layout_constraintBottom_toBottomOf="@+id/constraintLayout2"
+        app:layout_constraintEnd_toEndOf="parent"
+        app:layout_constraintHorizontal_bias="0.0"
+        app:layout_constraintStart_toStartOf="parent" />
+
+    <androidx.constraintlayout.widget.ConstraintLayout
+        android:id="@+id/constraintLayout2"
+        android:layout_width="match_parent"
+        android:layout_height="489dp"
+        android:layout_marginTop="244dp"
+        android:background="@drawable/custom_view"
+        app:layout_constraintEnd_toEndOf="parent"
+        app:layout_constraintHorizontal_bias="0.0"
+        app:layout_constraintStart_toStartOf="parent"
+        app:layout_constraintTop_toTopOf="parent">
+
+        <ScrollView
+            android:layout_width="wrap_content"
+            android:layout_height="0dp"
+            app:layout_constraintBottom_toBottomOf="parent"
+            app:layout_constraintEnd_toEndOf="parent"
+            app:layout_constraintHorizontal_bias="0.5"
+            app:layout_constraintStart_toStartOf="parent"
+            app:layout_constraintTop_toTopOf="parent">
+
+            <androidx.constraintlayout.widget.ConstraintLayout
+                android:id="@+id/constraintLayout3"
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content"
+                android:background="@drawable/custom_view"
+                android:paddingBottom="20dp"
+                app:layout_constraintEnd_toEndOf="parent"
+                app:layout_constraintHorizontal_bias="0.5"
+                app:layout_constraintStart_toStartOf="parent"
+                tools:layout_editor_absoluteY="244dp">
+
+                <TextView
+                    android:id="@+id/textWelcome"
+                    android:layout_width="wrap_content"
+                    android:layout_height="wrap_content"
+                    android:fontFamily="@font/verdana"
+                    android:text="Ingresa tus datos"
+                    android:textColor="#05AB52"
+                    android:textSize="25dp"
+                    app:layout_constraintBottom_toBottomOf="parent"
+                    app:layout_constraintEnd_toEndOf="parent"
+                    app:layout_constraintHorizontal_bias="0.227"
+                    app:layout_constraintStart_toStartOf="parent"
+                    app:layout_constraintTop_toTopOf="parent"
+                    app:layout_constraintVertical_bias="0.077" />
+
+                <EditText
+                    android:id="@+id/Nombre_Normal"
+                    android:layout_width="300dp"
+                    android:layout_height="45dp"
+                    android:layout_marginTop="84dp"
+                    android:background="@drawable/custom_edit_text"
+                    android:fontFamily="@font/verdana"
+                    android:hint=" Nombre(s)"
+                    android:textColor="#707070"
+                    android:textColorHint="#909497"
+                    android:textSize="16dp"
+                    app:layout_constraintEnd_toEndOf="parent"
+                    app:layout_constraintHorizontal_bias="0.387"
+                    app:layout_constraintStart_toStartOf="parent"
+                    app:layout_constraintTop_toTopOf="parent" />
+
+                <EditText
+                    android:id="@+id/apellido_Psico"
+                    android:layout_width="300dp"
+                    android:layout_height="45dp"
+                    android:layout_marginTop="136dp"
+                    android:background="@drawable/custom_edit_text"
+                    android:fontFamily="@font/verdana"
+                    android:hint=" Apellidos"
+                    android:textColor="#707070"
+                    android:textColorHint="#909497"
+                    android:textSize="16dp"
+                    app:layout_constraintEnd_toEndOf="parent"
+                    app:layout_constraintHorizontal_bias="0.387"
+                    app:layout_constraintStart_toStartOf="parent"
+                    app:layout_constraintTop_toTopOf="parent" />
+
+
+                <RadioGroup
+                    android:id="@+id/Sexo"
+                    android:layout_width="122dp"
+                    android:layout_height="95dp"
+                    android:layout_marginStart="41dp"
+                    android:layout_marginEnd="266dp"
+                    app:layout_constraintBottom_toBottomOf="parent"
+                    app:layout_constraintEnd_toEndOf="parent"
+                    app:layout_constraintHorizontal_bias="0.0"
+                    app:layout_constraintStart_toStartOf="parent"
+                    app:layout_constraintTop_toTopOf="parent"
+                    app:layout_constraintVertical_bias="0.421">
+
+                    <RadioButton
+                        android:id="@+id/radioMale"
+                        android:layout_width="fill_parent"
+                        android:layout_height="wrap_content"
+                        android:layout_marginTop="10dp"
+                        android:buttonTint="#707070"
+                        android:checked="false"
+                        android:fontFamily="@font/verdana"
+                        android:text="  Hombre"
+                        android:textColor="#707070"
+                        android:textSize="16dp" />
+
+                    <RadioButton
+                        android:id="@+id/radioFemale"
+                        android:layout_width="fill_parent"
+                        android:layout_height="wrap_content"
+                        android:layout_marginTop="20dp"
+                        android:buttonTint="#707070"
+                        android:checked="false"
+                        android:fontFamily="@font/verdana"
+                        android:text="   Mujer"
+                        android:textColor="#707070"
+                        android:textSize="16dp" />
+
+                </RadioGroup>
+
+                <Button
+                    android:id="@+id/BFecha"
+                    android:layout_width="160dp"
+                    android:layout_height="41dp"
+                    android:background="@drawable/custom_button_bordesverde"
+                    android:onClick="Fecha"
+                    android:text="Seleccione"
+                    android:textColor="#707070"
+                    app:layout_constraintBottom_toBottomOf="parent"
+                    app:layout_constraintEnd_toEndOf="parent"
+                    app:layout_constraintHorizontal_bias="0.713"
+                    app:layout_constraintStart_toStartOf="parent"
+                    app:layout_constraintTop_toTopOf="parent"
+                    app:layout_constraintVertical_bias="0.369" />
+
+                <EditText
+                    android:id="@+id/EFecha"
+                    android:layout_width="160dp"
+                    android:layout_height="45dp"
+                    android:layout_marginTop="240dp"
+                    android:background="@drawable/custom_edit_text"
+                    android:fontFamily="@font/verdana"
+                    android:hint=" Fecha Nacimiento"
+                    android:textColor="#707070"
+                    android:textColorHint="#909497"
+                    android:textSize="16dp"
+                    app:layout_constraintEnd_toEndOf="parent"
+                    app:layout_constraintHorizontal_bias="0.713"
+                    app:layout_constraintStart_toStartOf="parent"
+                    app:layout_constraintTop_toTopOf="parent" />
+
+                <EditText
+                    android:id="@+id/Domicilio_Psico"
+                    android:layout_width="300dp"
+                    android:layout_height="45dp"
+                    android:layout_marginTop="292dp"
+                    android:background="@drawable/custom_edit_text"
+                    android:fontFamily="@font/verdana"
+                    android:hint=" Domicilio de Consultorio*"
+                    android:textColor="#707070"
+                    android:textColorHint="#909497"
+                    android:textSize="16dp"
+                    app:layout_constraintEnd_toEndOf="parent"
+                    app:layout_constraintHorizontal_bias="0.387"
+                    app:layout_constraintStart_toStartOf="parent"
+                    app:layout_constraintTop_toTopOf="parent" />
+
+                <EditText
+                    android:id="@+id/Uni"
+                    android:layout_width="300dp"
+                    android:layout_height="45dp"
+                    android:layout_marginTop="344dp"
+                    android:background="@drawable/custom_edit_text"
+                    android:fontFamily="@font/verdana"
+                    android:hint=" Universidad*"
+                    android:textColor="#707070"
+                    android:textColorHint="#909497"
+                    android:textSize="16dp"
+                    app:layout_constraintEnd_toEndOf="parent"
+                    app:layout_constraintHorizontal_bias="0.387"
+                    app:layout_constraintStart_toStartOf="parent"
+                    app:layout_constraintTop_toTopOf="parent" />
+
+                <EditText
+                    android:id="@+id/Cedula_Profesional"
+                    android:layout_width="300dp"
+                    android:layout_height="45dp"
+                    android:layout_marginTop="396dp"
+                    android:background="@drawable/custom_edit_text"
+                    android:fontFamily="@font/verdana"
+                    android:hint=" Cedula Profesional*"
+                    android:textColor="#707070"
+                    android:textColorHint="#909497"
+                    android:textSize="16dp"
+                    app:layout_constraintEnd_toEndOf="parent"
+                    app:layout_constraintHorizontal_bias="0.387"
+                    app:layout_constraintStart_toStartOf="parent"
+                    app:layout_constraintTop_toTopOf="parent" />
+
+                <Button
+                    android:id="@+id/CrearCuenta"
+                    android:layout_width="240dp"
+                    android:layout_height="49dp"
+                    android:layout_marginTop="500dp"
+                    android:background="@drawable/custom_button_orange"
+                    android:fontFamily="@font/verdana"
+                    android:onClick="SiguientePsicologo"
+                    android:text="Siguiente"
+                    android:textAllCaps="false"
+                    android:textColor="#FFFF"
+                    android:textSize="18dp"
+                    android:textStyle="bold"
+                    app:layout_constraintBottom_toBottomOf="parent"
+                    app:layout_constraintEnd_toEndOf="parent"
+                    app:layout_constraintHorizontal_bias="0.497"
+                    app:layout_constraintStart_toStartOf="parent"
+                    app:layout_constraintTop_toTopOf="parent"
+                    app:layout_constraintVertical_bias="0.0" />
+
+            </androidx.constraintlayout.widget.ConstraintLayout>
+
+        </ScrollView>
+
+    </androidx.constraintlayout.widget.ConstraintLayout>
+
+</androidx.constraintlayout.widget.ConstraintLayout>
