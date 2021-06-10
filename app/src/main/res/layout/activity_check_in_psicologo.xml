@@ -136,7 +136,7 @@
                 </RadioGroup>
 
                 <Button
-                    android:id="@+id/BFecha"
+                    android:id="@+id/BFecha2"
                     android:layout_width="160dp"
                     android:layout_height="41dp"
                     android:background="@drawable/custom_button_bordesverde"
@@ -151,7 +151,7 @@
                     app:layout_constraintVertical_bias="0.369" />
 
                 <EditText
-                    android:id="@+id/EFecha"
+                    android:id="@+id/EFecha2"
                     android:layout_width="160dp"
                     android:layout_height="45dp"
                     android:layout_marginTop="240dp"
