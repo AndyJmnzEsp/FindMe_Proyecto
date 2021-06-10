@@ -21,7 +21,9 @@
         <activity android:name=".SingInActivity"></activity>
         <activity android:name=".CheckInActivity"></activity>
         <activity android:name=".CheckInNormalActivity"></activity>
+        <activity android:name=".CheckInPsicoUserActivity"></activity>
         <activity android:name=".CheckInPsicoActivity"></activity>
+        <activity android:name=".CheckInAdminUserActivity"></activity>
         <activity android:name=".CheckInAdminActivity"></activity>
         <activity android:name=".AutentificacionActivity"></activity>
         <activity android:name=".VerificacionActivity"></activity>

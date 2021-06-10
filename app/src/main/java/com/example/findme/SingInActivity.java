@@ -21,11 +21,11 @@ public class SingInActivity extends AppCompatActivity {
         startActivity(checkEstandar);
     }
     public void RegistroPsicologo (View view) {
-        Intent checkPsico = new Intent(getApplicationContext(), CheckInPsicoActivity.class);
+        Intent checkPsico = new Intent(getApplicationContext(), CheckInPsicoUserActivity.class);
         startActivity(checkPsico);
     }
     public void RegistroAdmin (View view) {
-        Intent checkAdmin = new Intent(getApplicationContext(), CheckInAdminActivity.class);
+        Intent checkAdmin = new Intent(getApplicationContext(), CheckInAdminUserActivity.class);
         startActivity(checkAdmin);
     }
 
