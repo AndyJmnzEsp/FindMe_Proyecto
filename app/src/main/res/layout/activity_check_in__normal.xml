@@ -10,7 +10,7 @@
     <ImageView
         android:layout_width="wrap_content"
         android:layout_height="409dp"
-        android:layout_marginBottom="340dp"
+        android:layout_marginBottom="344dp"
         android:src="@drawable/img_iniciar_sesion1"
         app:layout_constraintBottom_toBottomOf="@+id/constraintLayout2"
         app:layout_constraintEnd_toEndOf="parent"
@@ -19,14 +19,14 @@
 
     <androidx.constraintlayout.widget.ConstraintLayout
         android:id="@+id/constraintLayout2"
-        android:layout_width="414dp"
-        android:layout_height="484dp"
-        android:layout_marginBottom="2dp"
+        android:layout_width="match_parent"
+        android:layout_height="489dp"
+        android:layout_marginTop="244dp"
         android:background="@drawable/custom_view"
-        app:layout_constraintBottom_toBottomOf="parent"
         app:layout_constraintEnd_toEndOf="parent"
-        app:layout_constraintHorizontal_bias="0.5"
-        app:layout_constraintStart_toStartOf="parent">
+        app:layout_constraintHorizontal_bias="0.0"
+        app:layout_constraintStart_toStartOf="parent"
+        app:layout_constraintTop_toTopOf="parent">
 
         <TextView
             android:id="@+id/textWelcome"
@@ -150,7 +150,6 @@
             android:layout_width="160dp"
             android:layout_height="41dp"
             android:background="@drawable/custom_button_bordesmorado"
-            android:onClick="Fecha"
             android:text="Seleccione"
             android:textAllCaps="false"
             android:textSize="18dp"
