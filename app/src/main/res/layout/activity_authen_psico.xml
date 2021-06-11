@@ -59,7 +59,7 @@
             app:layout_constraintVertical_bias="0.234" />
 
         <EditText
-            android:id="@+id/Telfono"
+            android:id="@+id/TelfonoPsico"
             android:layout_width="286dp"
             android:layout_height="45dp"
             android:layout_marginTop="96dp"
@@ -82,7 +82,7 @@
             android:layout_height="49dp"
             android:background="@drawable/custom_button_orange"
             android:fontFamily="@font/verdana"
-            android:onClick="Verificacion"
+            android:onClick="VerificacionPsico"
             android:text="Siguiente"
             android:textAllCaps="false"
             android:textColor="#FFFF"

@@ -6,16 +6,16 @@ import android.view.View;
 
 import androidx.appcompat.app.AppCompatActivity;
 
-public class AutentificacionAdminActivity extends AppCompatActivity {
+public class VerificacionAdminActivity  extends AppCompatActivity {
     @Override
     protected void onCreate(Bundle savedInstanceState) {
         super.onCreate(savedInstanceState);
-        //Crear la vista del menu de registro
-        setContentView(R.layout.activity_authen_admin);
+        //Crear la vista
+        setContentView(R.layout.activity_verificacion_admin);
     }
     //Metodo para ir a la activity para
-    public void VerificacionA(View view) {
-        Intent VA = new Intent(this, VerificacionAdminActivity.class);
-        startActivity(VA);
+    public void CheckIn2Admin(View view) {
+        Intent CIA = new Intent(this, CheckInAdminActivity.class);
+        startActivity(CIA);
     }
 }

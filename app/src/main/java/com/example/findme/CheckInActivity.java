@@ -18,5 +18,9 @@ public class CheckInActivity extends AppCompatActivity {
         Intent checkIn = new Intent(this, AutentificacionActivity.class);
         startActivity(checkIn);
     }
-
+    //Metodo para redireccionar al usuario al login
+    public void AlreadyAnAccountN(View view) {
+        Intent AN = new Intent(this, LoginActivity.class);
+        startActivity(AN);
+    }
 }

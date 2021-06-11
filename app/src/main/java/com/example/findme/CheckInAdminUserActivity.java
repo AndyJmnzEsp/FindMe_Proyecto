@@ -12,9 +12,14 @@ public class CheckInAdminUserActivity extends AppCompatActivity {
         super.onCreate(savedInstanceState);
         setContentView(R.layout.activity_check_in_admin_user);
     }
-    //Metodo para ir a la activity para registrarse con un usuario ya registrado
-    /*public void checkIn(View view) {
-        Intent checkIn = new Intent(this, AutentificacionActivity.class);
-        startActivity(checkIn);
-    }*/
+    //Metodo para ir a la activity para
+    public void checkInAdmin(View view) {
+        Intent checkInA = new Intent(this, AutentificacionAdminActivity.class);
+        startActivity(checkInA);
+    }
+    //Metodo para ir a la activity para
+    public void AlreadyAnAccount(View view) {
+        Intent AA = new Intent(this, LoginActivity.class);
+        startActivity(AA);
+    }
 }

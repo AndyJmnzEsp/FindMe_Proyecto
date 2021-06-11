@@ -10,17 +10,17 @@
     <ImageView
         android:layout_width="412dp"
         android:layout_height="431dp"
-        android:layout_marginBottom="344dp"
+        android:layout_marginBottom="448dp"
         android:src="@drawable/img_iniciar_sesion_2"
         app:layout_constraintBottom_toBottomOf="@+id/constraintLayout2"
         app:layout_constraintEnd_toEndOf="parent"
-        app:layout_constraintHorizontal_bias="0.0"
+        app:layout_constraintHorizontal_bias="1.0"
         app:layout_constraintStart_toStartOf="parent" />
 
     <androidx.constraintlayout.widget.ConstraintLayout
         android:id="@+id/constraintLayout2"
         android:layout_width="match_parent"
-        android:layout_height="489dp"
+        android:layout_height="601dp"
         android:layout_marginTop="244dp"
         android:background="@drawable/custom_view"
         app:layout_constraintEnd_toEndOf="parent"
@@ -35,12 +35,13 @@
             app:layout_constraintEnd_toEndOf="parent"
             app:layout_constraintHorizontal_bias="0.5"
             app:layout_constraintStart_toStartOf="parent"
-            app:layout_constraintTop_toTopOf="parent">
+            app:layout_constraintTop_toTopOf="parent"
+            app:layout_constraintVertical_bias="1.0">
 
             <androidx.constraintlayout.widget.ConstraintLayout
                 android:id="@+id/constraintLayout3"
                 android:layout_width="match_parent"
-                android:layout_height="wrap_content"
+                android:layout_height="match_parent"
                 android:background="@drawable/custom_view"
                 android:paddingBottom="20dp"
                 app:layout_constraintEnd_toEndOf="parent"
@@ -218,7 +219,7 @@
                     android:id="@+id/CrearCuenta"
                     android:layout_width="240dp"
                     android:layout_height="49dp"
-                    android:layout_marginTop="500dp"
+                    android:layout_marginTop="469dp"
                     android:background="@drawable/custom_button_orange"
                     android:fontFamily="@font/verdana"
                     android:onClick="SiguientePsicologo"

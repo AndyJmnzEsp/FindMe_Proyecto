@@ -12,9 +12,14 @@ public class CheckInPsicoUserActivity extends AppCompatActivity{
         super.onCreate(savedInstanceState);
         setContentView(R.layout.activity_check_in_psicologo_user);
     }
-    //Metodo para ir a la activity para registrarse con un usuario ya registrado
-    /*public void checkIn(View view) {
-        Intent checkIn = new Intent(this, AutentificacionActivity.class);
-        startActivity(checkIn);
-    }*/
+    //Metodo para ir a la  activity de Autentificacion
+    public void checkInPsico(View view) {
+        Intent checkInP = new Intent(this, AutentificacionPsicoActivity.class);
+        startActivity(checkInP);
+    }
+    //Metodo para redireccionar al usuario al login
+    public void AlreadyAnAccountP(View view) {
+        Intent AP = new Intent(this, LoginActivity.class);
+        startActivity(AP);
+    }
 }

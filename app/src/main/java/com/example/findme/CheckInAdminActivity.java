@@ -12,41 +12,44 @@ import androidx.appcompat.app.AppCompatActivity;
 
 import java.util.Calendar;
 
-public class CheckInAdminActivity extends AppCompatActivity {
-
-    private int dia, mes, año;
+public class CheckInAdminActivity extends AppCompatActivity implements View.OnClickListener {
+    Button bfecha;
+    EditText Efecha;
+    private int dia, mes, anio;
 
     @Override
     protected void onCreate(Bundle savedInstanceState) {
         super.onCreate(savedInstanceState);
         //Crear la vista
         setContentView(R.layout.activity_check_in_admin);
-    }
-    //Declaracion de variables
-    Button Bfecha = findViewById(R.id.BFecha3);
-    EditText Efecha = findViewById(R.id.EFecha3);
 
-    public void Fecha (View v) {
-        if(v==Bfecha) {
+        ////Declaracion de variables
+        bfecha= (Button)findViewById(R.id.BFecha3);
+        Efecha = (EditText)findViewById(R.id.EFecha3);
+        bfecha.setOnClickListener(this);
+    }
+
+    public void onClick (View v) {
+        if (v == bfecha) {
             final Calendar c = Calendar.getInstance();
             dia = c.get(Calendar.DAY_OF_MONTH);
             mes = c.get(Calendar.MONTH);
-            año = c.get(Calendar.YEAR);
+            anio = c.get(Calendar.YEAR);
 
-            DatePickerDialog datePickerDialog =new DatePickerDialog(this, new DatePickerDialog.OnDateSetListener() {
+            DatePickerDialog datePickerDialog = new DatePickerDialog(this, new DatePickerDialog.OnDateSetListener() {
                 @Override
                 public void onDateSet(DatePicker view, int year, int month, int dayOfMonth) {
-                    Efecha.setText(dayOfMonth+"/"+(month+1)+"/"+year);
+                    Efecha.setText(dayOfMonth + "/" + (month + 1) + "/" + year);
                 }
             }
-                    ,dia,mes,año);
+                    , dia, mes, anio);
             datePickerDialog.show();
         }
     }
 
-    public void DatosSiguientes4(View view) {
-        Intent Admin = new Intent(this, MainActivity.class);
-        startActivity(Admin);
+    public void Next3(View view) {
+        Intent Next = new Intent(this, LoginActivity.class);
+        startActivity(Next);
     }
 }
 

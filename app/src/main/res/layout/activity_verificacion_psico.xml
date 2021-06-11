@@ -1,0 +1,211 @@
+<?xml version="1.0" encoding="utf-8"?>
+<androidx.constraintlayout.widget.ConstraintLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:app="http://schemas.android.com/apk/res-auto"
+    xmlns:tools="http://schemas.android.com/tools"
+    android:layout_width="match_parent"
+    android:layout_height="match_parent"
+    android:background="#FFFF"
+    android:backgroundTint="#FFFFFF"
+    android:orientation="vertical">
+
+    <ImageView
+        android:layout_width="412dp"
+        android:layout_height="431dp"
+        android:layout_marginBottom="344dp"
+        android:src="@drawable/img_iniciar_sesion_2"
+        app:layout_constraintBottom_toBottomOf="@+id/constraintLayout2"
+        app:layout_constraintEnd_toEndOf="parent"
+        app:layout_constraintHorizontal_bias="0.0"
+        app:layout_constraintStart_toStartOf="parent" />
+
+    <androidx.constraintlayout.widget.ConstraintLayout
+        android:id="@+id/constraintLayout2"
+        android:layout_width="match_parent"
+        android:layout_height="489dp"
+        android:layout_marginTop="244dp"
+        android:background="@drawable/custom_view"
+        android:backgroundTint="#FFFFFF"
+        app:layout_constraintEnd_toEndOf="parent"
+        app:layout_constraintHorizontal_bias="0.0"
+        app:layout_constraintStart_toStartOf="parent"
+        app:layout_constraintTop_toTopOf="parent">
+
+        <TextView
+            android:id="@+id/textView3"
+            android:layout_width="261dp"
+            android:layout_height="37dp"
+            android:fontFamily="@font/verdana"
+            android:text="Código de Verificación"
+            android:textColor="#05AB52"
+            android:textSize="20dp"
+            android:textStyle="bold"
+            app:layout_constraintBottom_toBottomOf="parent"
+            app:layout_constraintEnd_toEndOf="parent"
+            app:layout_constraintHorizontal_bias="0.161"
+            app:layout_constraintStart_toStartOf="parent"
+            app:layout_constraintTop_toTopOf="parent"
+            app:layout_constraintVertical_bias="0.082" />
+
+        <TextView
+            android:id="@+id/textView4"
+            android:layout_width="298dp"
+            android:layout_height="20dp"
+            android:fontFamily="@font/verdana"
+            android:text="El código de verificacion fue enviado al "
+            android:textColor="#707070"
+            android:textSize="12dp"
+            app:layout_constraintBottom_toBottomOf="parent"
+            app:layout_constraintEnd_toEndOf="parent"
+            app:layout_constraintHorizontal_bias="0.212"
+            app:layout_constraintStart_toStartOf="parent"
+            app:layout_constraintTop_toTopOf="parent"
+            app:layout_constraintVertical_bias="0.179" />
+
+        <TextView
+            android:layout_width="224dp"
+            android:layout_height="20dp"
+            android:fontFamily="@font/verdana"
+            android:text="*telefono*"
+            android:textColor="#707070"
+            android:textSize="12dp"
+            app:layout_constraintBottom_toBottomOf="parent"
+            app:layout_constraintEnd_toEndOf="parent"
+            app:layout_constraintHorizontal_bias="0.128"
+            app:layout_constraintStart_toStartOf="parent"
+            app:layout_constraintTop_toTopOf="parent"
+            app:layout_constraintVertical_bias="0.22" />
+
+        <TextView
+            android:id="@+id/textView5"
+            android:layout_width="298dp"
+            android:layout_height="20dp"
+            android:fontFamily="@font/verdana"
+            android:text="Código de 6 digitos"
+            android:textColor="#707070"
+            android:textSize="12dp"
+            app:layout_constraintBottom_toBottomOf="parent"
+            app:layout_constraintEnd_toEndOf="parent"
+            app:layout_constraintHorizontal_bias="0.212"
+            app:layout_constraintStart_toStartOf="parent"
+            app:layout_constraintTop_toTopOf="parent"
+            app:layout_constraintVertical_bias="0.332" />
+
+        <EditText
+            android:id="@+id/VerPsico1"
+            android:layout_width="45dp"
+            android:layout_height="45dp"
+            android:layout_marginBottom="252dp"
+            android:background="@drawable/custom_edit_text_number"
+            android:fontFamily="@font/verdana"
+            android:inputType="number"
+            android:paddingStart="8dp"
+            android:textColor="#707070"
+            android:textSize="18dp"
+            app:layout_constraintBottom_toBottomOf="parent"
+            app:layout_constraintEnd_toEndOf="parent"
+            app:layout_constraintHorizontal_bias="0.065"
+            app:layout_constraintStart_toStartOf="parent" />
+
+        <EditText
+            android:id="@+id/VerPsico2"
+            android:layout_width="45dp"
+            android:layout_height="45dp"
+            android:layout_marginBottom="252dp"
+            android:background="@drawable/custom_edit_text_number"
+            android:fontFamily="@font/verdana"
+            android:inputType="number"
+            android:paddingStart="8dp"
+            android:textColor="#707070"
+            android:textSize="18dp"
+            app:layout_constraintBottom_toBottomOf="parent"
+            app:layout_constraintEnd_toEndOf="parent"
+            app:layout_constraintHorizontal_bias="0.235"
+            app:layout_constraintStart_toStartOf="parent" />
+
+        <EditText
+            android:id="@+id/VerPsico3"
+            android:layout_width="45dp"
+            android:layout_height="45dp"
+            android:layout_marginBottom="252dp"
+            android:background="@drawable/custom_edit_text_number"
+            android:fontFamily="@font/verdana"
+            android:inputType="number"
+            android:paddingStart="8dp"
+            android:textColor="#707070"
+            android:textSize="18dp"
+            app:layout_constraintBottom_toBottomOf="parent"
+            app:layout_constraintEnd_toEndOf="parent"
+            app:layout_constraintHorizontal_bias="0.405"
+            app:layout_constraintStart_toStartOf="parent" />
+
+        <EditText
+            android:id="@+id/VerPsico4"
+            android:layout_width="45dp"
+            android:layout_height="45dp"
+            android:layout_marginBottom="252dp"
+            android:background="@drawable/custom_edit_text_number"
+            android:fontFamily="@font/verdana"
+            android:inputType="number"
+            android:paddingStart="8dp"
+            android:textColor="#707070"
+            android:textSize="18dp"
+            app:layout_constraintBottom_toBottomOf="parent"
+            app:layout_constraintEnd_toEndOf="parent"
+            app:layout_constraintHorizontal_bias="0.575"
+            app:layout_constraintStart_toStartOf="parent" />
+
+        <EditText
+            android:id="@+id/VerPsico5"
+            android:layout_width="45dp"
+            android:layout_height="45dp"
+            android:layout_marginBottom="252dp"
+            android:background="@drawable/custom_edit_text_number"
+            android:fontFamily="@font/verdana"
+            android:inputType="number"
+            android:paddingStart="8dp"
+            android:textColor="#707070"
+            android:textSize="18dp"
+            app:layout_constraintBottom_toBottomOf="parent"
+            app:layout_constraintEnd_toEndOf="parent"
+            app:layout_constraintHorizontal_bias="0.745"
+            app:layout_constraintStart_toStartOf="parent" />
+
+        <EditText
+            android:id="@+id/VerPsico6"
+            android:layout_width="45dp"
+            android:layout_height="45dp"
+            android:layout_marginBottom="252dp"
+            android:background="@drawable/custom_edit_text_number"
+            android:fontFamily="@font/verdana"
+            android:inputType="number"
+            android:paddingStart="8dp"
+            android:textColor="#707070"
+            android:textSize="18dp"
+            app:layout_constraintBottom_toBottomOf="parent"
+            app:layout_constraintEnd_toEndOf="parent"
+            app:layout_constraintHorizontal_bias="0.915"
+            app:layout_constraintStart_toStartOf="parent" />
+
+        <Button
+            android:id="@+id/Siguiente3"
+            android:layout_width="240dp"
+            android:layout_height="49dp"
+            android:background="@drawable/custom_button_orange"
+            android:fontFamily="@font/verdana"
+            android:onClick="CheckIn2Psico"
+            android:text="Siguiente"
+            android:textAllCaps="false"
+            android:textColor="#FFFF"
+            android:textSize="18dp"
+            android:textStyle="bold"
+            app:layout_constraintBottom_toBottomOf="parent"
+            app:layout_constraintEnd_toEndOf="parent"
+            app:layout_constraintHorizontal_bias="0.5"
+            app:layout_constraintStart_toStartOf="parent"
+            app:layout_constraintTop_toTopOf="parent"
+            app:layout_constraintVertical_bias="0.634" />
+
+    </androidx.constraintlayout.widget.ConstraintLayout>
+
+
+</androidx.constraintlayout.widget.ConstraintLayout>

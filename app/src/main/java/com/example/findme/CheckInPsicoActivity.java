@@ -13,8 +13,8 @@ import android.widget.EditText;
 import java.util.Calendar;
 
 public class CheckInPsicoActivity  extends AppCompatActivity implements View.OnClickListener {
-    Button bfecha, bhora;
-    EditText Efecha, Ehora;
+    Button bfecha;
+    EditText Efecha;
     private int dia,mes,anio;
     @Override
     protected void onCreate(Bundle savedInstanceState) {

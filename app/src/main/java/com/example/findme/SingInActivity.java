@@ -28,5 +28,10 @@ public class SingInActivity extends AppCompatActivity {
         Intent checkAdmin = new Intent(getApplicationContext(), CheckInAdminUserActivity.class);
         startActivity(checkAdmin);
     }
+    //Metodo para redireccionar al usuario al login
+    public void AlreadyAnAccountNN(View view) {
+        Intent ANN = new Intent(this, LoginActivity.class);
+        startActivity(ANN);
+    }
 
 }

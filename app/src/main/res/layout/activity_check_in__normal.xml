@@ -168,7 +168,7 @@
             android:layout_height="49dp"
             android:background="@drawable/custom_button_orange"
             android:fontFamily="@font/verdana"
-            android:onClick="DatosSiguientes3"
+            android:onClick="Next1"
             android:text="Siguiente"
             android:textAllCaps="false"
             android:textColor="#FFFF"
