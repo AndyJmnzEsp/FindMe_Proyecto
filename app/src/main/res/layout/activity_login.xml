@@ -96,6 +96,7 @@
             android:textAllCaps="false"
             android:textColor="#A488D8"
             android:textSize="12dp"
+            android:onClick="ForgotPass"
             app:layout_constraintBottom_toBottomOf="parent"
             app:layout_constraintEnd_toEndOf="parent"
             app:layout_constraintHorizontal_bias="0.872"
