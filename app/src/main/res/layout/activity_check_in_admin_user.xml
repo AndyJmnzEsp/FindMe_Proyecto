@@ -66,6 +66,7 @@
             android:textColor="#707070"
             android:textCursorDrawable="@null"
             android:textSize="18dp"
+            android:inputType="textCapSentences"
             app:layout_constraintBottom_toBottomOf="parent"
             app:layout_constraintEnd_toEndOf="parent"
             app:layout_constraintStart_toStartOf="parent"

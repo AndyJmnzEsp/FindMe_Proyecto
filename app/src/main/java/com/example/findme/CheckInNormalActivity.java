@@ -46,7 +46,7 @@ public class CheckInNormalActivity  extends AppCompatActivity implements View.On
     }
 
     public void Next1 (View v){
-        Intent Next = new Intent(this, LoginActivity.class);
+        Intent Next = new Intent(this, TerminosYCondicionesActivity.class);
         startActivity(Next);
     }
 }

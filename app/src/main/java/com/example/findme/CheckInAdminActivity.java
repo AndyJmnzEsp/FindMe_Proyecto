@@ -48,7 +48,7 @@ public class CheckInAdminActivity extends AppCompatActivity implements View.OnCl
     }
 
     public void Next3(View view) {
-        Intent Next = new Intent(this, LoginActivity.class);
+        Intent Next = new Intent(this, TerminosYCondicionesActivity.class);
         startActivity(Next);
     }
 }

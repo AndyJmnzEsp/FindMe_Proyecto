@@ -32,6 +32,7 @@
         <activity android:name=".VerificacionAdminActivity"></activity>
         <activity android:name=".AutentificacionActivity"></activity>
         <activity android:name=".VerificacionActivity"></activity>
+        <activity android:name=".TerminosYCondicionesActivity"></activity>
     </application>
 
 </manifest>
