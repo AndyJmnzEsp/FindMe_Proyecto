@@ -45,7 +45,7 @@ public class CheckInPsicoActivity  extends AppCompatActivity implements View.OnC
         }
     }
     public void SiguientePsicologo(View view) {
-        Intent V = new Intent(this, LoginActivity.class);
+        Intent V = new Intent(this, TerminosYCondicionesActivity.class);
         startActivity(V);
     }
 }

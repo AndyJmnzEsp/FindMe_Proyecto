@@ -18,6 +18,7 @@
             </intent-filter>
         </activity>
         <activity android:name=".LoginActivity"></activity>
+        <activity android:name=".ResetContrasenia"></activity>
         <activity android:name=".SingInActivity"></activity>
         <activity android:name=".CheckInActivity"></activity>
         <activity android:name=".CheckInNormalActivity"></activity>
@@ -31,6 +32,7 @@
         <activity android:name=".VerificacionAdminActivity"></activity>
         <activity android:name=".AutentificacionActivity"></activity>
         <activity android:name=".VerificacionActivity"></activity>
+        <activity android:name=".TerminosYCondicionesActivity"></activity>
     </application>
 
 </manifest>
