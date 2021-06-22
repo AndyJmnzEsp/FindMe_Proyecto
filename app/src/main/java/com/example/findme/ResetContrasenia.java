@@ -1,6 +1,7 @@
 package com.example.findme;
 
 import android.content.Intent;
+import android.content.pm.ActivityInfo;
 import android.os.Bundle;
 import android.util.Patterns;
 import android.view.View;
@@ -21,6 +22,7 @@ public class ResetContrasenia extends AppCompatActivity {
     TextInputEditText emailEditText;*/
     @Override
     protected void onCreate(Bundle savedInstanceState) {
+        setRequestedOrientation(ActivityInfo.SCREEN_ORIENTATION_PORTRAIT);
         super.onCreate(savedInstanceState);
         setContentView(R.layout.activity_reset_contrasenia);
 

@@ -157,6 +157,7 @@
             android:textSize="18dp"
             android:textColor="#FFFF"
             android:textStyle="bold"
+            android:onClick="Muro"
             android:background="@drawable/custom_button_orange"
             app:layout_constraintBottom_toBottomOf="parent"
             app:layout_constraintEnd_toEndOf="parent"
