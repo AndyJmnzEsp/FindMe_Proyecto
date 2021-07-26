@@ -58,7 +58,7 @@
             app:layout_constraintVertical_bias="0.188" />
 
         <EditText
-            android:id="@+id/editText"
+            android:id="@+id/Text_NombreU_Normal"
             android:layout_width="325dp"
             android:layout_height="46dp"
             android:fontFamily="@font/verdana"
@@ -72,12 +72,27 @@
             app:layout_constraintTop_toTopOf="parent"
             app:layout_constraintVertical_bias="0.257" />
 
+        <EditText
+            android:id="@+id/Text_email_Normal"
+            android:layout_width="325dp"
+            android:layout_height="46dp"
+            android:fontFamily="@font/verdana"
+            android:inputType="textCapSentences"
+            android:textColor="#707070"
+            android:textCursorDrawable="@null"
+            android:textSize="18dp"
+            app:layout_constraintBottom_toBottomOf="parent"
+            app:layout_constraintEnd_toEndOf="parent"
+            app:layout_constraintStart_toStartOf="parent"
+            app:layout_constraintTop_toTopOf="parent"
+            app:layout_constraintVertical_bias="0.446" />
+
         <TextView
-            android:id="@+id/pass"
+            android:id="@+id/email"
             android:layout_width="wrap_content"
             android:layout_height="wrap_content"
             android:fontFamily="@font/verdana"
-            android:text="Constraseña"
+            android:text="Email"
             android:textColor="#5F27C6"
             android:textSize="12dp"
             app:layout_constraintBottom_toBottomOf="parent"
@@ -87,32 +102,6 @@
             app:layout_constraintTop_toTopOf="parent"
             app:layout_constraintVertical_bias="0.364" />
 
-
-        <com.google.android.material.textfield.TextInputLayout
-            android:id="@+id/passwordLayout"
-            android:layout_width="325dp"
-            android:layout_height="50dp"
-            android:scrollbarSize="18dp"
-            app:layout_constraintBottom_toBottomOf="parent"
-            app:layout_constraintLeft_toLeftOf="parent"
-            app:layout_constraintRight_toRightOf="parent"
-            app:layout_constraintTop_toTopOf="parent"
-            app:layout_constraintVertical_bias="0.448"
-            app:layout_constraintHorizontal_bias=".500"
-            app:passwordToggleEnabled="true"
-            app:passwordToggleTint="#707070"        >
-
-            <com.google.android.material.textfield.TextInputEditText
-                android:layout_width="match_parent"
-                android:layout_height="30dp"
-                android:background="@drawable/custom_edit_text"
-                android:ems="15"
-                android:inputType="textPassword"
-                android:textColor="#707070"
-                android:textSize="18dp"
-                android:paddingStart="8dp"/>
-
-        </com.google.android.material.textfield.TextInputLayout>
 
         <TextView
             android:id="@+id/pass2"
@@ -145,6 +134,7 @@
             app:passwordToggleTint="#707070">
 
             <com.google.android.material.textfield.TextInputEditText
+                android:id="@+id/Text_pass_Normal"
                 android:layout_width="325dp"
                 android:layout_height="30dp"
                 android:background="@drawable/custom_edit_text"

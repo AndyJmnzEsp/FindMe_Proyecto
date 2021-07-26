@@ -8,13 +8,15 @@ import androidx.appcompat.app.ActionBarDrawerToggle;
 import androidx.appcompat.app.AppCompatActivity;
 
 public class MenuLateralActivity extends AppCompatActivity {
-    @Override
+
+}
+    /*@Override
     protected void onCreate(Bundle savedInstanceState) {
         super.onCreate(savedInstanceState);
         setContentView(R.layout.activity_home);
 
-        Toolbar toolbar = findViewById(R.id.toolbar);
-        setSupportActionBar((Toolbar) findViewById(R.id.toolbar));
+        //Toolbar toolbar = findViewById(R.id.toolbar);
+        //setSupportActionBar((Toolbar) findViewById(R.id.toolbar));
 
         View drawerLayout = findViewById(R.id.drawer_layout);
         ActionBarDrawerToggle toggle = new ActionBarDrawerToggle(
@@ -22,6 +24,7 @@ public class MenuLateralActivity extends AppCompatActivity {
         drawerLayout.addDrawerListener(toggle);
         toggle.syncState();
     }
-
-
 }
+
+}*/
+
