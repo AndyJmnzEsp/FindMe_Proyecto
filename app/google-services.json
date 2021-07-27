@@ -14,6 +14,14 @@
       },
       "oauth_client": [
         {
+          "client_id": "592335802705-dng3an3vcpdusleii6t21a1eajh5l8qa.apps.googleusercontent.com",
+          "client_type": 1,
+          "android_info": {
+            "package_name": "com.example.findme",
+            "certificate_hash": "876d6cb20a7a8ad518ae2226127ea23a1c954b0d"
+          }
+        },
+        {
           "client_id": "592335802705-qrtj2c53bknirljk64eomgnci3qc77f0.apps.googleusercontent.com",
           "client_type": 3
         }

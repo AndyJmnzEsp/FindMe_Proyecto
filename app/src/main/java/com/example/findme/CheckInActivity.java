@@ -9,7 +9,6 @@ import android.util.Log;
 import android.view.View;
 import android.widget.Button;
 import android.widget.EditText;
-import android.widget.ProgressBar;
 import android.widget.Toast;
 
 import androidx.annotation.NonNull;
@@ -17,11 +16,9 @@ import androidx.appcompat.app.AppCompatActivity;
 
 import com.google.android.gms.tasks.OnCompleteListener;
 import com.google.android.gms.tasks.Task;
+import com.google.firebase.FirebaseApp;
 import com.google.firebase.auth.AuthResult;
 import com.google.firebase.auth.FirebaseAuth;
-import com.google.firebase.auth.FirebaseAuthInvalidCredentialsException;
-import com.google.firebase.auth.FirebaseAuthUserCollisionException;
-import com.google.firebase.auth.FirebaseAuthWeakPasswordException;
 import com.google.firebase.auth.FirebaseUser;
 
 public class CheckInActivity extends AppCompatActivity {
@@ -49,20 +46,22 @@ public class CheckInActivity extends AppCompatActivity {
         setContentView(R.layout.activity_check_in_estandar);
 
         mAuth = FirebaseAuth.getInstance();
-        NameField = (EditText)findViewById(R.id.Text_NombreU_Normal);
-        EmailField = (EditText)findViewById(R.id.Text_email_Normal);
-        PasswordField = (EditText)findViewById(R.id.Text_pass_Normal);
+        NameField = (EditText) findViewById(R.id.Text_NombreU_Normal);
+        EmailField = (EditText) findViewById(R.id.Text_email_Normal);
+        PasswordField = (EditText) findViewById(R.id.Text_pass_Normal);
         Progress = new ProgressDialog(this);
-        Registrar = (Button)findViewById(R.id.CrearCuenta);
+        Registrar = (Button) findViewById(R.id.CrearCuenta);
 
         //Listener boton
         //StartRegister es la funcion
-         Registrar.setOnClickListener((view) -> { startRegister();});
+        Registrar.setOnClickListener((view) -> {
+            startRegister();
+        });
 
         mAuthListener = new FirebaseAuth.AuthStateListener() {
             @Override
             public void onAuthStateChanged(@NonNull FirebaseAuth firebaseAuth) {
-                String Nulo ;
+                String Nulo;
                 FirebaseUser user = firebaseAuth.getCurrentUser();
                 if (user != null) {
                     Nulo = "No";
@@ -77,14 +76,15 @@ public class CheckInActivity extends AppCompatActivity {
         Intent AN = new Intent(this, LoginActivity.class);
         startActivity(AN);
     }
-    private void startRegister(){
+
+    private void startRegister() {
         //Obtenemos los datos ingresados
         final String Name = NameField.getText().toString();
         String email = EmailField.getText().toString();
         String password = PasswordField.getText().toString();
 
         //Verificamos que ningun campo este vacio
-        if(!TextUtils.isEmpty(Name) && !TextUtils.isEmpty(email) && !TextUtils.isEmpty(password)) {
+        if (!TextUtils.isEmpty(Name) && !TextUtils.isEmpty(email) && !TextUtils.isEmpty(password)) {
 
             //Mandamos Mensaje ya que cumplio con el llenado de datos
             Progress.setMessage("Te estamos registrando... Danos un minuto :)");
@@ -102,7 +102,7 @@ public class CheckInActivity extends AppCompatActivity {
                                 //Mensaje de error
                                 Log.e("Signup Error", "onCancelled", task.getException());
                                 //Hacemos una validacion de contraseña aceptable para firebase, minimo 8 caracteres
-                                int  LPassword = password.length();
+                                int LPassword = password.length();
                                 /*if (LPassword <= 8){
                                     Toast.makeText(CheckInActivity.this,"Tu contraseña no es valida", Toast.LENGTH_SHORT).show();
                                 }*/
@@ -112,7 +112,7 @@ public class CheckInActivity extends AppCompatActivity {
                                 String uid = user.getUid();
                                 //Una vez registrado, redirigimos al login para iniciar sesion
                                 startActivity(new Intent(CheckInActivity.this, AutentificacionActivity.class));
-                                Toast.makeText(CheckInActivity.this,uid, Toast.LENGTH_SHORT).show();
+                                Toast.makeText(CheckInActivity.this, uid, Toast.LENGTH_SHORT).show();
                                 finish();
                             }
                         }
