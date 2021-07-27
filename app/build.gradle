@@ -1,6 +1,7 @@
-plugins {
-    id 'com.android.application'
-}
+
+apply plugin: 'com.android.application'
+apply plugin: 'com.google.gms.google-services'
+
 
 android {
     compileSdkVersion 30
@@ -30,6 +31,13 @@ android {
 
 dependencies {
 
+    // Import the Firebase BoM
+    implementation platform('com.google.firebase:firebase-bom:28.2.0')
+    implementation 'com.google.firebase:firebase-analytics'
+    implementation 'com.google.firebase:firebase-auth'
+    implementation 'com.hbb20:ccp:2.4.7' //Para codigo de paises
+    implementation 'com.chaos.view:pinview:1.4.4' //Para pinviews
+
     implementation 'androidx.appcompat:appcompat:1.2.0'
     implementation 'com.google.android.material:material:1.3.0'
     implementation 'androidx.constraintlayout:constraintlayout:2.0.4'
@@ -39,5 +47,8 @@ dependencies {
     androidTestImplementation 'androidx.test.espresso:espresso-core:3.3.0'
     implementation "com.google.android.material:material:<version>"
     implementation 'com.google.android.material:material:1.1.0-alpha10'
+    implementation 'com.google.firebase:firebase-auth:21.0.1'
+
+
 
 }
