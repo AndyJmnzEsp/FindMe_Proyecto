@@ -68,7 +68,6 @@ public class CheckInActivity extends AppCompatActivity {
                 }
             }
         };
-
     }
 
     //Metodo para redireccionar al usuario al login
@@ -103,20 +102,22 @@ public class CheckInActivity extends AppCompatActivity {
                                 Log.e("Signup Error", "onCancelled", task.getException());
                                 //Hacemos una validacion de contraseña aceptable para firebase, minimo 8 caracteres
                                 int LPassword = password.length();
+                                Toast.makeText(CheckInActivity.this, LPassword, Toast.LENGTH_SHORT);
                                 /*if (LPassword <= 8){
-                                    Toast.makeText(CheckInActivity.this,"Tu contraseña no es valida", Toast.LENGTH_SHORT).show();
-                                }*/
+                                    Toast.makeText(CheckInActivity.this,"Tu contraseña no cumple la longitud necesaria", Toast.LENGTH_SHORT).show();
+                                }^*/
                             } else {
                                 FirebaseUser user = mAuth.getCurrentUser();
                                 //Obtenempos el id del usuario que se esta registrando
                                 String uid = user.getUid();
                                 //Una vez registrado, redirigimos al login para iniciar sesion
-                                startActivity(new Intent(CheckInActivity.this, AutentificacionActivity.class));
-                                Toast.makeText(CheckInActivity.this, uid, Toast.LENGTH_SHORT).show();
+                                startActivity(new Intent(CheckInActivity.this, CheckInNormalActivity.class));
+                                Toast.makeText(CheckInActivity.this,"Bienvenido", Toast.LENGTH_SHORT);
                                 finish();
                             }
                         }
-                    });
+                    }
+            );
         }
     }
 }

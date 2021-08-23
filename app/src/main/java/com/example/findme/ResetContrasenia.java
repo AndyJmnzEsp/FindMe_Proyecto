@@ -1,10 +1,14 @@
 package com.example.findme;
 
+import android.app.ProgressDialog;
 import android.content.Intent;
 import android.content.pm.ActivityInfo;
 import android.os.Bundle;
 import android.util.Patterns;
 import android.view.View;
+import android.widget.Button;
+import android.widget.EditText;
+import android.widget.ProgressBar;
 import android.widget.Toast;
 
 import androidx.annotation.NonNull;
@@ -18,67 +22,67 @@ import com.google.firebase.auth.FirebaseAuth;
 
 public class ResetContrasenia extends AppCompatActivity {
 
-    /*MaterialButton recuperarBoton;
-    TextInputEditText emailEditText;*/
+    private Button recuperarBoton;
+    private EditText emailEditText;
+    private String email  = "";
+    private FirebaseAuth mAuth;
+    private ProgressDialog mDialog;
+
     @Override
     protected void onCreate(Bundle savedInstanceState) {
         setRequestedOrientation(ActivityInfo.SCREEN_ORIENTATION_PORTRAIT);
         super.onCreate(savedInstanceState);
         setContentView(R.layout.activity_reset_contrasenia);
 
-        /*recuperarBoton = findViewById(R.id.recuperarButton);
-        emailEditText = findViewById(R.id.email);
+        mAuth = FirebaseAuth.getInstance();
+        mDialog = new ProgressDialog(this);
+
+        recuperarBoton = findViewById(R.id.recuperar);
+        emailEditText = (EditText) findViewById(R.id.emailrecuperarpass);
+
         recuperarBoton.setOnClickListener(new View.OnClickListener() {
             @Override
             public void onClick(View v) {
-                validate();
+                //Obtenemos el texto que el usuario ingreso y lo convertimos a string
+                email = emailEditText.getText().toString();
+
+                //Realizamos una validacion para saber si esta vacio
+                if(!email.isEmpty()) {
+                    //Mostramos el progreso en una barra de proceso
+                    mDialog.setMessage("Espera un momento... :)");
+                    mDialog.setCanceledOnTouchOutside(false);
+                    mDialog.show();
+                    //Llamamos a la funcion ya que si hay información
+                    resetpassword();
+                }
+                else {
+                    //Notificamos al usuario que hubo un problema
+                    Toast.makeText(ResetContrasenia.this, "Debe ingresar un correo email", Toast.LENGTH_SHORT).show();
+                }
             }
-        });*/
+        });
     }
 
+    public void resetpassword () {
 
+        //Establecemos el idioma en el que se enviara el correo
+        mAuth.setLanguageCode("es");
 
-    /*public void validate () {
-        String email = emailEditText.getText().toString().trim();
-
-        if(email.isEmpty() || !Patterns.EMAIL_ADDRESS.matcher(email).matches()) {
-            emailEditText.setError("Correo Invalido");
-            return;
-        }
-        sendEmail(email);
-
-
+        //Metodo para enviar email con parametro email en tipo texto
+        mAuth.sendPasswordResetEmail(email).addOnCompleteListener(new OnCompleteListener<Void>() {
+            @Override
+            public void onComplete(@NonNull Task<Void> task) {
+                //Si la contraseña se envio exitosamente
+                if (task.isSuccessful()) {
+                    Toast.makeText(ResetContrasenia.this, "Se envio el correo exitosamente, reestablece tu contraseña", Toast.LENGTH_SHORT).show();
+                }
+                //Si ocurrio algo que no permitio que se enviara correctamente
+                else{
+                    Toast.makeText(ResetContrasenia.this, "Ocurrio un error al enviar el correo, intenta de nuevo", Toast.LENGTH_SHORT).show();
+                }
+                mDialog.dismiss();
+            }
+        });
     }
-    //Metodo para el caso dee que el usuario presione la tecla de regresar o la flecha
-    @Override
-    public void onBackPressed() {
-        super.onBackPressed();
-
-        Intent intent = new Intent(ResetContrasenia.this, LoginActivity.class);
-        startActivity(intent);
-        finish();
-    }
-
-    public void sendEmail(String email) {
-        FirebaseAuth auth = FirebaseAuth.getInstance();
-        String emailAddress = email;
-
-        auth.sendPasswordResetEmail(emailAddress)
-                .addOnCompleteListener(new OnCompleteListener<Void>() {
-                    @Override
-                    public void onComplete(@NonNull Task<Void> task) {
-                        if(task.isSuccessful()) {
-                            Toast.makeText(ResetContrasenia.this, "Correo exitosamente enviado", Toast.LENGTH_SHORT).show();
-                            Intent intent = new Intent(ResetContrasenia.this, LoginActivity.class);
-                            startActivity(intent);
-                            finish();
-                        }
-                        else  {
-                            Toast.makeText(ResetContrasenia.this, "Correo Invalido", Toast.LENGTH_SHORT).show();
-
-                        }
-                    }
-                });
-    }*/
 
 }
