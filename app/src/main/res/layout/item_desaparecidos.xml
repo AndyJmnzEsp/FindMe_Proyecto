@@ -1,0 +1,59 @@
+<?xml version="1.0" encoding="utf-8"?>
+<RelativeLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    android:layout_width="130dp"
+    android:layout_height="200dp"
+    android:layout_marginStart="10dp"
+    android:layout_marginTop="10dp"
+    android:layout_marginEnd="10dp"
+    android:layout_marginBottom="40dp"
+    android:clickable="true"
+    android:focusable="true"
+    android:elevation="20dp"
+    android:background="@drawable/featured_bg">
+
+    <ImageView
+        android:id="@+id/item_desaparecido_img"
+        android:layout_width="match_parent"
+        android:layout_height="150dp"
+        android:scaleType="centerCrop" />
+
+    <RelativeLayout
+        android:layout_width="match_parent"
+        android:layout_height="match_parent"
+        android:layout_below="@+id/item_desaparecido_img">
+
+        <TextView
+            android:id="@+id/item_desaparecido_text"
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:layout_marginStart="8dp"
+            android:layout_toStartOf="@id/item_desaparecido_edad"
+            android:maxLines="1"
+            android:singleLine="true"
+            android:text="Nombre"
+            android:textColor="@color/black"
+            android:textStyle="bold" />
+
+        <TextView
+            android:id="@+id/item_desaparecido_edad"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:layout_alignParentEnd="true"
+            android:layout_marginStart="4dp"
+            android:layout_marginEnd="8dp"
+            android:text="18"
+            android:textColor="#BEAEDE" />
+
+        <TextView
+            android:id="@+id/item_desaparecido_ciudad"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:layout_below="@id/item_desaparecido_text"
+            android:text="Ciudad"
+            android:layout_marginStart="8dp"
+            android:textColor="#BEAEDE"/>
+
+    </RelativeLayout>
+
+
+</RelativeLayout>
