@@ -23,6 +23,7 @@ public class MainActivity extends AppCompatActivity {
                 Intent homeIntent = new Intent(MainActivity.this, HomeActivity.class);
                 startActivity(homeIntent);
                 finish();
+
             }
         }, SPLASH_TIME_OUT);
     }
