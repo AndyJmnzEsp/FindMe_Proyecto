@@ -25,6 +25,13 @@
         <activity android:name=".CheckInAdminActivity"></activity>
         <activity android:name=".AutentificacionActivity"></activity>
         <activity android:name=".VerificacionActivity"></activity>
+<<<<<<< Updated upstream
+=======
+        <activity android:name=".TerminosYCondicionesActivity"></activity>
+        <activity android:name=".VerifyActivity"></activity>
+        <activity android:name=".PrincipalMuroActivity"></activity>
+
+>>>>>>> Stashed changes
     </application>
 
 </manifest>

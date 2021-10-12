@@ -1,0 +1,22 @@
+<?xml version="1.0" encoding="utf-8"?>
+<navigation xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:app="http://schemas.android.com/apk/res-auto"
+    xmlns:tools="http://schemas.android.com/tools"
+    android:id="@+id/mobile_navigation_bottom"
+    app:startDestination="@id/amigosFragment">
+    <fragment
+        android:id="@+id/amigosFragment"
+        android:name="com.example.findme.ui.Amigos.AmigosFragment"
+        android:label="fragment_amigos"
+        tools:layout="@layout/fragment_amigos" />
+    <fragment
+        android:id="@+id/reportesFragment"
+        android:name="com.example.findme.ui.Reportes.ReportesFragment"
+        android:label="fragment_reportes"
+        tools:layout="@layout/fragment_reportes" />
+    <fragment
+        android:id="@+id/miPerfilFragment"
+        android:name="com.example.findme.ui.MiPerfil.MiPerfilFragment"
+        android:label="fragment_miperfil"
+        tools:layout="@layout/fragment_miperfil" />
+</navigation>

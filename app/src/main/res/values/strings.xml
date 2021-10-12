@@ -1,3 +1,18 @@
 <resources>
     <string name="app_name">FindMe</string>
+
+    <string name="menu_buzon">Buzon</string>
+    <string name="menu_ayuda">Ayuda</string>
+    <string name="menu_organizacion">Organizacion</string>
+    <string name="menu_estadisticas">Estadisticas</string>
+    <string name="menu_personase">Personas Encontradas</string>
+    <string name="menu_seguimientomp">Seguimiento MP</string>
+    <string name="menu_cerrars">Cerrar Sesion</string>
+
+    <string name="menu_amigos">Amigos</string>
+    <string name="menu_muro">Muro</string>
+    <string name="menu_reporte">Reportes</string>
+    <string name="menu_miperfil">Mi Perfil</string>
+    <string name="menu_more">Más</string>
+
 </resources>
