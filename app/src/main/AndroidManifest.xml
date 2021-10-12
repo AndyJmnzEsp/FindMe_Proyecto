@@ -37,7 +37,6 @@
         <activity android:name=".TerminosYCondicionesActivity"></activity>
         <activity android:name=".VerifyActivity"></activity>
         <activity android:name=".PrincipalMuroActivity"></activity>
-        <activity android:name=".ResetContrasenia"></activity>
 
     </application>
 
