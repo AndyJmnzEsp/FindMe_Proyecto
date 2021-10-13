@@ -1,0 +1,36 @@
+<?xml version="1.0" encoding="utf-8"?>
+<menu xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:tools="http://schemas.android.com/tools"
+    tools:showIn="navigation_view">
+
+    <group android:checkableBehavior="single">
+        <item
+            android:id="@+id/nav_buzon"
+            android:icon="@drawable/ic_buzon"
+            android:title="@string/menu_buzon" />
+        <item
+            android:id="@+id/nav_ayuda"
+            android:icon="@drawable/ic_ayuda"
+            android:title="@string/menu_ayuda" />
+        <item
+            android:id="@+id/nav_organizacion"
+            android:icon="@drawable/ic_org"
+            android:title="@string/menu_organizacion" />
+        <item
+            android:id="@+id/nav_estadisticas"
+            android:icon="@drawable/ic_estadisticasa"
+            android:title="@string/menu_estadisticas" />
+        <item
+            android:id="@+id/nav_personase"
+            android:icon="@drawable/ic_pe"
+            android:title="@string/menu_personase" />
+        <item
+            android:id="@+id/nav_seguimientomp"
+            android:icon="@drawable/ic_mp"
+            android:title="@string/menu_seguimientomp" />
+        <item
+            android:id="@+id/nav_cerrars"
+            android:icon="@drawable/ic_cs"
+            android:title="@string/menu_cerrars" />
+    </group>
+</menu>

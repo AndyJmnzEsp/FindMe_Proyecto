@@ -2,11 +2,11 @@
 <androidx.constraintlayout.widget.ConstraintLayout xmlns:android="http://schemas.android.com/apk/res/android"
     xmlns:app="http://schemas.android.com/apk/res-auto"
     xmlns:tools="http://schemas.android.com/tools"
-    android:id="@+id/activity_muro"
+    android:id="@+id/fragment_muro"
     android:layout_width="match_parent"
     android:layout_height="match_parent"
     android:background="@color/white"
-    tools:context=".MainActivity">
+    tools:context=".ui.Muro.MuroFragment">
 
     <RelativeLayout
         android:layout_width="match_parent"
@@ -21,22 +21,22 @@
             android:id="@+id/search_container"
             android:layout_width="match_parent"
             android:layout_height="50dp"
-            android:orientation="vertical"
             android:layout_marginStart="25dp"
             android:layout_marginTop="65dp"
             android:layout_marginEnd="25dp"
             android:layout_marginBottom="20dp"
             android:background="@drawable/bg_search"
+            android:elevation="20dp"
             android:gravity="center_vertical"
-            android:elevation="20dp">
+            android:orientation="vertical">
 
             <androidx.appcompat.widget.SearchView
                 android:layout_width="match_parent"
                 android:layout_height="wrap_content"
                 android:theme="@style/SearchView"
                 app:iconifiedByDefault="true"
-                app:queryHint="Búsqueda por Nombre"
-                app:queryBackground="@android:color/transparent"/>
+                app:queryBackground="@android:color/transparent"
+                app:queryHint="Búsqueda por Nombre" />
 
         </LinearLayout>
 
@@ -53,10 +53,7 @@
 
         </androidx.recyclerview.widget.RecyclerView>
 
-        
-
     </RelativeLayout>
-
 
     <Button
         android:id="@+id/CerrarSesioon"

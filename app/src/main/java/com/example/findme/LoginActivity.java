@@ -82,6 +82,7 @@ public class LoginActivity extends AppCompatActivity {
     public void DontHaveAccountLogin (View view) {
         Intent M = new Intent(this, SingInActivity.class);
         startActivity(M);
+
     }
 
 }

@@ -1,0 +1,45 @@
+<?xml version="1.0" encoding="utf-8"?>
+<navigation xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:app="http://schemas.android.com/apk/res-auto"
+    xmlns:tools="http://schemas.android.com/tools"
+    android:id="@+id/mobile_navigation"
+    app:startDestination="@+id/nav_buzon">
+
+    <fragment
+        android:id="@+id/nav_buzon"
+        android:name="com.example.findme.ui.Reportes.ReportesFragment"        android:label="@string/menu_buzon"
+        tools:layout="@layout/fragment_buzon" />
+
+    <fragment
+        android:id="@+id/nav_ayuda"
+        android:name="com.example.findme.ui.Ayuda.AyudaFragment"
+        android:label="@string/menu_ayuda"
+        tools:layout="@layout/fragment_ayuda" />
+
+    <fragment
+        android:id="@+id/nav_organizacion"
+        android:name="com.example.findme.ui.Organizacion.OrganizacionFragment"
+        android:label="@string/menu_organizacion"
+        tools:layout="@layout/fragment_organizaciones" />
+    <fragment
+        android:id="@+id/nav_estadisticas"
+        android:name="com.example.findme.ui.Estadisticas.EstadisticasFragment"
+        android:label="@string/menu_estadisticas"
+        tools:layout="@layout/fragment_estadisticas"/>
+    <fragment
+        android:id="@+id/nav_personase"
+        android:name="com.example.findme.ui.PersonasE.PersonasEFragment"
+        android:label="@string/menu_personase"
+        tools:layout="@layout/fragment_personase"/>
+    <fragment
+        android:id="@+id/nav_seguimientomp"
+        android:name="com.example.findme.ui.SeguimientoMP.SeguimientoMPFragment"
+        android:label="@string/menu_seguimientomp"
+        tools:layout="@layout/fragment_seguimientomp"/>
+    <fragment
+        android:id="@+id/nav_cerrars"
+        android:name="com.example.findme.ui.CerrarS.CerrarSFragment"
+        android:label="@string/menu_cerrars"
+        tools:layout="@layout/fragment_cerrars"/>
+
+</navigation>

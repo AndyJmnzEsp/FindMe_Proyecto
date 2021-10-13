@@ -20,4 +20,7 @@
         <item name="android:textSize">18sp</item>
         <item name="tint">@color/black</item>
     </style>
+    <style name="Theme.FindMe.AppBarOverlay" parent="ThemeOverlay.AppCompat.Dark.ActionBar" />
+    <style name="Theme.Menu.PopupOverlay" parent="ThemeOverlay.AppCompat.Light" />
+
 </resources>

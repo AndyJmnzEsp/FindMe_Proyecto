@@ -1,0 +1,119 @@
+<?xml version="1.0" encoding="utf-8"?>
+<androidx.constraintlayout.widget.ConstraintLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:app="http://schemas.android.com/apk/res-auto"
+    xmlns:tools="http://schemas.android.com/tools"
+    android:layout_width="match_parent"
+    android:layout_height="match_parent"
+    android:background="@color/white"
+    tools:context=".ui.Reportes.ReportesFragment">
+
+    <!--Agregar la funcion del onclick-->
+    <RelativeLayout
+        android:id="@+id/Mis_Reportes"
+        android:layout_width="335dp"
+        android:layout_height="175dp"
+        android:layout_marginTop="472dp"
+        android:background="@drawable/custom_button_bordesmorado"
+        app:layout_constraintEnd_toEndOf="parent"
+        app:layout_constraintStart_toStartOf="parent"
+        app:layout_constraintTop_toTopOf="parent">
+
+        <ImageView
+            android:layout_width="75dp"
+            android:layout_height="85dp"
+            android:layout_alignParentEnd="true"
+            android:layout_alignParentBottom="true"
+            android:layout_marginEnd="237dp"
+            android:layout_marginBottom="45dp"
+            android:src="@drawable/ic_misreportes" />
+
+        <TextView
+            android:layout_width="200dp"
+            android:layout_height="85dp"
+            android:layout_alignParentEnd="true"
+            android:layout_alignParentBottom="true"
+            android:layout_marginEnd="19dp"
+            android:layout_marginBottom="45dp"
+            android:fontFamily="@font/verdana"
+            android:gravity="center"
+            android:text="Mis Reportes"
+            android:textColor="#7861F1"
+            android:textSize="29dp" />
+
+
+    </RelativeLayout>
+
+    <!--Agregar la funcion del onclick-->
+    <RelativeLayout
+        android:id="@+id/Reporte_Gnl"
+        android:layout_width="335dp"
+        android:layout_height="175dp"
+        android:background="@drawable/custom_button_bordesmorado"
+        app:layout_constraintBottom_toBottomOf="parent"
+        app:layout_constraintEnd_toEndOf="parent"
+        app:layout_constraintStart_toStartOf="parent"
+        app:layout_constraintTop_toTopOf="parent"
+        app:layout_constraintVertical_bias="0.095">
+
+        <ImageView
+            android:layout_width="75dp"
+            android:layout_height="85dp"
+            android:layout_alignParentEnd="true"
+            android:layout_alignParentBottom="true"
+            android:layout_marginEnd="237dp"
+            android:layout_marginBottom="45dp"
+            android:src="@drawable/ic_reporte_g" />
+
+        <TextView
+            android:layout_width="200dp"
+            android:layout_height="85dp"
+            android:layout_alignParentEnd="true"
+            android:layout_alignParentBottom="true"
+            android:layout_marginEnd="19dp"
+            android:layout_marginBottom="45dp"
+            android:fontFamily="@font/verdana"
+            android:gravity="center"
+            android:text="Reporte General"
+            android:textColor="#7861F1"
+            android:textSize="29dp" />
+
+
+    </RelativeLayout>
+    <!--Agregar la funcion del onclick-->
+    <RelativeLayout
+        android:id="@+id/Reporte_Emergencia"
+        android:layout_width="335dp"
+        android:layout_height="175dp"
+        android:background="@drawable/custom_button_bordesmorado"
+        app:layout_constraintBottom_toTopOf="@+id/Mis_Reportes"
+        app:layout_constraintEnd_toEndOf="parent"
+        app:layout_constraintHorizontal_bias="0.5"
+        app:layout_constraintStart_toStartOf="parent"
+        app:layout_constraintTop_toBottomOf="@+id/Reporte_Gnl">
+
+        <ImageView
+            android:layout_width="75dp"
+            android:layout_height="85dp"
+            android:layout_alignParentEnd="true"
+            android:layout_alignParentBottom="true"
+            android:layout_marginEnd="237dp"
+            android:layout_marginBottom="45dp"
+            android:src="@drawable/ic_reporteer" />
+
+        <TextView
+            android:layout_width="200dp"
+            android:layout_height="85dp"
+            android:layout_alignParentEnd="true"
+            android:layout_alignParentBottom="true"
+            android:layout_marginEnd="19dp"
+            android:layout_marginBottom="45dp"
+            android:fontFamily="@font/verdana"
+            android:gravity="center"
+            android:text="Reporte Emergencia"
+            android:textColor="#7861F1"
+            android:textSize="29dp" />
+
+
+    </RelativeLayout>
+
+</androidx.constraintlayout.widget.ConstraintLayout>
