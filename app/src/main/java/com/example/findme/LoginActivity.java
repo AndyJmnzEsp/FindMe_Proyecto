@@ -6,20 +6,30 @@ import androidx.appcompat.app.AppCompatActivity;
 import android.content.Intent;
 import android.content.pm.ActivityInfo;
 import android.os.Bundle;
+import android.util.Log;
 import android.view.View;
 import android.widget.Button;
 import android.widget.EditText;
 import android.widget.Toast;
 
+import com.android.volley.AuthFailureError;
+import com.android.volley.Request;
+import com.android.volley.RequestQueue;
+import com.android.volley.Response;
+import com.android.volley.VolleyError;
+import com.android.volley.toolbox.StringRequest;
+import com.android.volley.toolbox.Volley;
 import com.google.android.gms.tasks.OnCompleteListener;
 import com.google.android.gms.tasks.Task;
 import com.google.firebase.auth.AuthResult;
 import com.google.firebase.auth.FirebaseAuth;
 import com.google.firebase.auth.PhoneMultiFactorAssertion;
 
+import java.util.HashMap;
+import java.util.Map;
+
 public class LoginActivity extends AppCompatActivity {
 
-    private FirebaseAuth auth;
     private EditText email;
     private EditText password;
     private Button login;
@@ -36,7 +46,6 @@ public class LoginActivity extends AppCompatActivity {
         //lanza al usuario la vista establecida
         setContentView(R.layout.activity_login);
 
-        auth = FirebaseAuth.getInstance();
         email = (EditText) findViewById(R.id.NombreUs);
         password = (EditText) findViewById(R.id.ContraseñaL);
         login = (Button) findViewById(R.id.iniciarSesion);
@@ -44,38 +53,50 @@ public class LoginActivity extends AppCompatActivity {
         login.setOnClickListener(new View.OnClickListener() {
             @Override
             public void onClick(View v) {
-                Email = email.getText().toString();
-                Password = password.getText().toString();
-
-                if (!Email.isEmpty() && !Password.isEmpty() ) {
-                    loginUser();
-                }
-                else {
-                    Toast.makeText(LoginActivity.this, "Ingresa tus datos en los campos correspondientes", Toast.LENGTH_SHORT).show();
-                }
+                loginUser("http://192.168.0.16/findme/ingresar_usuario_normal.php");
             }
         });
-
     }
 
-    private void loginUser(){
-        auth.signInWithEmailAndPassword(Email, Password).addOnCompleteListener(new OnCompleteListener<AuthResult>() {
+    private void loginUser(String URL){
+        StringRequest stringRequest = new StringRequest(Request.Method.POST, URL, new Response.Listener<String>() {
             @Override
-            public void onComplete(@NonNull Task<AuthResult> task) {
-                if (task.isSuccessful()){
-                    startActivity(new Intent(LoginActivity.this, PrincipalMuroActivity.class));
-                    finish();
+            public void onResponse(String response) {
+                Log.d("Ingreso", response.toString());
+                if (response.equals("Exitoso")){
+                    Toast.makeText(getApplicationContext(),"Operacion Exitosa",Toast.LENGTH_SHORT).show();
+                    Intent Next = new Intent(getApplicationContext(), PrincipalMuroActivity.class);
+                    startActivity(Next);
                 }
                 else {
-                    Toast.makeText(LoginActivity.this, "No se pudo iniciar sesion, intenta nuevamente", Toast.LENGTH_SHORT).show();
+                    Toast.makeText(getApplicationContext(),"Datos Incorrectos",Toast.LENGTH_SHORT).show();
                 }
             }
-        });
+        }, new Response.ErrorListener() {
+            @Override
+            public void onErrorResponse(VolleyError error) {
+                Toast.makeText(getApplicationContext(), error.toString(), Toast.LENGTH_LONG).show();
+                Log.d("Server", error.toString());
+            }
+        }) {
+            @Override
+            protected Map<String, String> getParams() throws AuthFailureError {
+                Map<String,String> parametrs= new HashMap<>();
+                parametrs.put("Contrasena", password.getText().toString());
+                parametrs.put("UserName",email.getText().toString());
+
+                return parametrs;
+            }
+        };
+
+        RequestQueue requestQueue = Volley.newRequestQueue(this);
+        requestQueue.add(stringRequest);
+
     }
 
     //Metodo para redireccionar al usuario
     public void ForgotPass(View view) {
-        Intent FP = new Intent(this, ResetContrasenia.class);
+        Intent FP = new Intent(this, CheckInNormalActivity.class);
         startActivity(FP);
     }
     //Metodo para redireccionar al usuario

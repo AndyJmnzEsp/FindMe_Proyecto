@@ -29,15 +29,6 @@ public class CheckInActivity extends AppCompatActivity {
 
     private Button Registrar;
 
-    private FirebaseAuth mAuth;
-    private ProgressDialog Progress;
-    private FirebaseAuth.AuthStateListener mAuthListener;
-
-    @Override
-    public void onStart() {
-        super.onStart();
-        mAuth.addAuthStateListener(mAuthListener);
-    }
 
     @Override
     protected void onCreate(Bundle savedInstanceState) {
@@ -45,79 +36,33 @@ public class CheckInActivity extends AppCompatActivity {
         super.onCreate(savedInstanceState);
         setContentView(R.layout.activity_check_in_estandar);
 
-        mAuth = FirebaseAuth.getInstance();
         NameField = (EditText) findViewById(R.id.Text_NombreU_Normal);
         EmailField = (EditText) findViewById(R.id.Text_email_Normal);
         PasswordField = (EditText) findViewById(R.id.Text_pass_Normal);
-        Progress = new ProgressDialog(this);
         Registrar = (Button) findViewById(R.id.CrearCuenta);
 
-        //Listener boton
-        //StartRegister es la funcion
-        Registrar.setOnClickListener((view) -> {
-            startRegister();
-        });
-
-        mAuthListener = new FirebaseAuth.AuthStateListener() {
+        Registrar.setOnClickListener(new View.OnClickListener() {
             @Override
-            public void onAuthStateChanged(@NonNull FirebaseAuth firebaseAuth) {
-                String Nulo;
-                FirebaseUser user = firebaseAuth.getCurrentUser();
-                if (user != null) {
-                    Nulo = "No";
+            public void onClick(View v) {
+                int Passlong = PasswordField.length();
+                if(Passlong < 8){
+                    Toast.makeText(getApplicationContext(), "Tu contraseña no cumple con los requisitos, vuelve a intentarlo", Toast.LENGTH_LONG).show();
+                }
+                else{
+                    Intent intent = new Intent(getApplicationContext(), AutentificacionActivity.class);
+                    //Mandamos los datos anteriores
+                    intent.putExtra("Nombre", NameField.getText().toString());
+                    intent.putExtra("Email", EmailField.getText().toString());
+                    intent.putExtra("Password", PasswordField.getText().toString());
+                    startActivity(intent);
                 }
             }
-        };
+        });
     }
 
     //Metodo para redireccionar al usuario al login
     public void AlreadyAnAccountN(View view) {
         Intent AN = new Intent(this, LoginActivity.class);
         startActivity(AN);
-    }
-
-    private void startRegister() {
-        //Obtenemos los datos ingresados
-        final String Name = NameField.getText().toString();
-        String email = EmailField.getText().toString();
-        String password = PasswordField.getText().toString();
-
-        //Verificamos que ningun campo este vacio
-        if (!TextUtils.isEmpty(Name) && !TextUtils.isEmpty(email) && !TextUtils.isEmpty(password)) {
-
-            //Mandamos Mensaje ya que cumplio con el llenado de datos
-            Progress.setMessage("Te estamos registrando... Danos un minuto :)");
-            Progress.show();
-
-            //Creamos el Usuario y mandamos su email, y su contraseña
-            mAuth.createUserWithEmailAndPassword(email, password)
-                    .addOnCompleteListener(new OnCompleteListener<AuthResult>() {
-                        @Override
-                        public void onComplete(@NonNull Task<AuthResult> task) {
-                            //Retirar el mensaje ya que la peticion fue hecha
-                            Progress.dismiss();
-                            //Si la peticion se realizo exitosamente mandamos en un toast que se registro correctamente
-                            if (!task.isSuccessful()) {
-                                //Mensaje de error
-                                Log.e("Signup Error", "onCancelled", task.getException());
-                                //Hacemos una validacion de contraseña aceptable para firebase, minimo 8 caracteres
-                                int LPassword = password.length();
-                                Toast.makeText(CheckInActivity.this, LPassword, Toast.LENGTH_SHORT);
-                                /*if (LPassword <= 8){
-                                    Toast.makeText(CheckInActivity.this,"Tu contraseña no cumple la longitud necesaria", Toast.LENGTH_SHORT).show();
-                                }^*/
-                            } else {
-                                FirebaseUser user = mAuth.getCurrentUser();
-                                //Obtenempos el id del usuario que se esta registrando
-                                String uid = user.getUid();
-                                //Una vez registrado, redirigimos al login para iniciar sesion
-                                startActivity(new Intent(CheckInActivity.this, CheckInNormalActivity.class));
-                                Toast.makeText(CheckInActivity.this,"Bienvenido", Toast.LENGTH_SHORT);
-                                finish();
-                            }
-                        }
-                    }
-            );
-        }
     }
 }

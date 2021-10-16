@@ -28,8 +28,6 @@ public class AutentificacionActivity extends AppCompatActivity {
         Telefono = (EditText) findViewById(R.id.telefono);
         CodigoPais = (CountryCodePicker) findViewById(R.id.Codigo_Pais);
         Enviar = (Button) findViewById(R.id.Enviar);
-
-        listeners();
     }
 
     private void listeners() {
@@ -39,6 +37,7 @@ public class AutentificacionActivity extends AppCompatActivity {
         //Obtenemos los datos que se han ingresado
         String _Nombre = getIntent().getStringExtra("Nombre");
         String _Email = getIntent().getStringExtra("Email");
+        String _Password = getIntent().getStringExtra("Contrasena");
 
         //Listener para el boton una vez ingresado
         Enviar.setOnClickListener(new View.OnClickListener() {
@@ -50,14 +49,14 @@ public class AutentificacionActivity extends AppCompatActivity {
                 Toast.makeText(AutentificacionActivity.this, "Correcto ", Toast.LENGTH_SHORT).show();
 
                 //redireccionamos a la  vista donde se ingresa el codigo
-                Intent intent = new Intent(getApplicationContext(), VerificacionActivity.class);
+                Intent intent = new Intent(getApplicationContext(), CheckInNormalActivity.class);
                 //Mandamos los datos anteriores
                 intent.putExtra("Nombre", _Nombre);
                 intent.putExtra("Email", _Email);
+                intent.putExtra("Password",_Password);
                 intent.putExtra("Telefono", Numero_Tel);
                 startActivity(intent);
             }
         });
     }
-
 }

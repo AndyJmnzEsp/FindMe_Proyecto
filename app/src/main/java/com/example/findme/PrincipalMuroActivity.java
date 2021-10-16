@@ -18,7 +18,7 @@ import androidx.navigation.Navigation;
 import androidx.navigation.ui.AppBarConfiguration;
 import androidx.navigation.ui.NavigationUI;
 
-import com.example.findme.databinding.ActivityNavigationBinding;
+import com.example.findme.databinding.ActivityPrincipalMuroBinding;
 import com.google.android.material.bottomnavigation.BottomNavigationView;
 import com.google.android.material.navigation.NavigationView;
 
@@ -27,14 +27,14 @@ import com.google.firebase.auth.FirebaseAuth;
 public class PrincipalMuroActivity extends AppCompatActivity {
 
     private AppBarConfiguration mAppBarConfiguration;
-    private ActivityNavigationBinding binding;
+    private ActivityPrincipalMuroBinding binding;
 
     @Override
     protected void onCreate(Bundle savedInstanceState) {
         setRequestedOrientation(ActivityInfo.SCREEN_ORIENTATION_PORTRAIT);
         super.onCreate(savedInstanceState);
 
-        binding = ActivityNavigationBinding.inflate(getLayoutInflater());
+        binding = ActivityPrincipalMuroBinding.inflate(getLayoutInflater());
         setContentView(binding.getRoot());
         BottomNavigationView bottomNavigationView = findViewById(R.id.bottom_nav);
 
