@@ -3,6 +3,12 @@
   <component name="DesignSurface">
     <option name="filePathToZoomLevelMap">
       <map>
+  <component name="ProjectRootManager" version="2" languageLevel="JDK_1_8" default="true" project-jdk-name="1.8" project-jdk-type="JavaSDK">
+  <component name="DesignSurface">
+    <option name="filePathToZoomLevelMap">
+      <map>
+        <entry key="..\:/Users/Are/Documents/GitHub/FindMe_Proyecto/app/src/main/res/drawable-v24/custom_bg_muro.xml" value="0.2203125" />
+        <entry key="..\:/Users/Are/Documents/GitHub/FindMe_Proyecto/app/src/main/res/drawable-v24/custom_button_bordesrojo.xml" value="0.2203125" />
         <entry key="..\:/Users/Are/Documents/GitHub/FindMe_Proyecto/app/src/main/res/drawable-v24/custom_edit_text_number.xml" value="0.2203125" />
         <entry key="..\:/Users/Are/Documents/GitHub/FindMe_Proyecto/app/src/main/res/drawable/bg_search.xml" value="0.2203125" />
         <entry key="..\:/Users/Are/Documents/GitHub/FindMe_Proyecto/app/src/main/res/drawable/custom_button_bordesmorado.xml" value="0.2203125" />
@@ -10,7 +16,7 @@
         <entry key="..\:/Users/Are/Documents/GitHub/FindMe_Proyecto/app/src/main/res/drawable/custom_gradient_background.xml" value="0.2203125" />
         <entry key="..\:/Users/Are/Documents/GitHub/FindMe_Proyecto/app/src/main/res/drawable/custom_line.xml" value="0.2203125" />
         <entry key="..\:/Users/Are/Documents/GitHub/FindMe_Proyecto/app/src/main/res/drawable/custom_view_terminos.xml" value="0.10885416666666667" />
-        <entry key="..\:/Users/Are/Documents/GitHub/FindMe_Proyecto/app/src/main/res/drawable/featured_bg.xml" value="1.1857142857142857" />
+        <entry key="..\:/Users/Are/Documents/GitHub/FindMe_Proyecto/app/src/main/res/drawable/featured_bg.xml" value="0.67" />
         <entry key="..\:/Users/Are/Documents/GitHub/FindMe_Proyecto/app/src/main/res/drawable/half_rounded.xml" value="0.22" />
         <entry key="..\:/Users/Are/Documents/GitHub/FindMe_Proyecto/app/src/main/res/drawable/ic_index_round_background.xml" value="0.2203125" />
         <entry key="..\:/Users/Are/Documents/GitHub/FindMe_Proyecto/app/src/main/res/drawable/ic_launcher_background.xml" value="0.2203125" />
@@ -18,14 +24,20 @@
         <entry key="..\:/Users/Are/Documents/GitHub/FindMe_Proyecto/app/src/main/res/layout/activity_authen_psico.xml" value="0.25" />
         <entry key="..\:/Users/Are/Documents/GitHub/FindMe_Proyecto/app/src/main/res/layout/activity_check_in_admin_user.xml" value="0.16077898550724637" />
         <entry key="..\:/Users/Are/Documents/GitHub/FindMe_Proyecto/app/src/main/res/layout/activity_check_in_estandar.xml" value="0.11865942028985507" />
+        <entry key="..\:/Users/Are/Documents/GitHub/FindMe_Proyecto/app/src/main/res/layout/activity_login.xml" value="0.1322463768115942" />
+        <entry key="..\:/Users/Are/Documents/GitHub/FindMe_Proyecto/app/src/main/res/layout/activity_main.xml" value="0.13405797101449277" />
         <entry key="..\:/Users/Are/Documents/GitHub/FindMe_Proyecto/app/src/main/res/layout/activity_principal_muro.xml" value="0.25" />
-        <entry key="..\:/Users/Are/Documents/GitHub/FindMe_Proyecto/app/src/main/res/layout/item_desaparecidos.xml" value="0.5" />
+        <entry key="..\:/Users/Are/Documents/GitHub/FindMe_Proyecto/app/src/main/res/layout/item_desaparecidos.xml" value="0.25" />
+        <entry key="..\:/Users/Are/Documents/GitHub/FindMe_Proyecto/app/src/main/res/layout/item_randDesaparecidos.xml" value="0.20416666666666666" />
+        <entry key="..\:/Users/Are/Documents/GitHub/FindMe_Proyecto/app/src/main/res/layout/item_rand_desaparecidos.xml" value="0.20416666666666666" />
         <entry key="..\:/Users/Are/Documents/GitHub/FindMe_Proyecto/app/src/main/res/menu/menu.xml" value="0.20416666666666666" />
         <entry key="..\:/Users/Are/Documents/GitHub/FindMe_Proyecto/app/src/main/res/menu/options_menu.xml" value="0.20416666666666666" />
+        <entry key="..\:/Users/Are/Documents/GitHub/FindMe_Proyecto/app/src/main/res/mipmap-anydpi-v26/ic_launcher.xml" value="0.2203125" />
       </map>
     </option>
   </component>
   <component name="ProjectRootManager" version="2" languageLevel="JDK_11" default="true" project-jdk-name="1.8" project-jdk-type="JavaSDK">
+
     <output url="file://$PROJECT_DIR$/build/classes" />
   </component>
   <component name="ProjectType">

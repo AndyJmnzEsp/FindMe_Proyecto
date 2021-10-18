@@ -8,26 +8,24 @@ import android.widget.Button;
 import android.widget.Toast;
 
 import androidx.appcompat.app.AppCompatActivity;
+import androidx.recyclerview.widget.GridLayoutManager;
+import androidx.recyclerview.widget.LinearLayoutManager;
+import androidx.recyclerview.widget.RecyclerView;
 
-import androidx.coordinatorlayout.widget.CoordinatorLayout;
-import androidx.databinding.DataBindingUtil;
-import androidx.drawerlayout.widget.DrawerLayout;
-import androidx.fragment.app.FragmentManager;
-import androidx.navigation.NavController;
-import androidx.navigation.Navigation;
-import androidx.navigation.ui.AppBarConfiguration;
-import androidx.navigation.ui.NavigationUI;
-
-import com.example.findme.databinding.ActivityPrincipalMuroBinding;
-import com.google.android.material.bottomnavigation.BottomNavigationView;
-import com.google.android.material.navigation.NavigationView;
-
+import com.example.findme.Model.Desaparecidos;
+import com.example.findme.adapter.RandomDesAdapter;
+import com.example.findme.adapter.RecientesAdapter;
 import com.google.firebase.auth.FirebaseAuth;
+
+import java.util.ArrayList;
+import java.util.List;
 
 public class PrincipalMuroActivity extends AppCompatActivity {
 
-    private AppBarConfiguration mAppBarConfiguration;
-    private ActivityPrincipalMuroBinding binding;
+    private Button CS;
+    private FirebaseAuth auth;
+    private RecyclerView recentRecyclerView, randomRecyclerView;
+    private RecyclerView.Adapter mAdapter, randAdapter;
 
     @Override
     protected void onCreate(Bundle savedInstanceState) {
@@ -68,3 +66,58 @@ public class PrincipalMuroActivity extends AppCompatActivity {
         }*/
 }
 
+        setContentView(R.layout.activity_principal_muro);
+
+        CS = (Button) findViewById(R.id.CerrarSesioon);
+        auth = FirebaseAuth.getInstance();
+
+        CS.setOnClickListener(new View.OnClickListener() {
+            @Override
+            public void onClick(View v) {
+                auth.signOut();
+                Toast.makeText(PrincipalMuroActivity.this, "Esperamos haber ayudado :)", Toast.LENGTH_LONG).show();
+                startActivity(new Intent(PrincipalMuroActivity.this, LoginActivity.class));
+                finish();
+            }
+        });
+
+        //RECYCLERVIEWS
+
+        recentRecyclerView = (RecyclerView) findViewById(R.id.recent_RV);
+        //
+        recentRecyclerView.setHasFixedSize(true);
+
+        // use a linear layout manager
+        LinearLayoutManager horizontalLayoutManagaer = new LinearLayoutManager(PrincipalMuroActivity.this, LinearLayoutManager.HORIZONTAL, false);
+        recentRecyclerView.setLayoutManager(horizontalLayoutManagaer);
+
+        //
+        mAdapter = new RecientesAdapter(getData());
+        recentRecyclerView.setAdapter(mAdapter);
+
+        //Random recyclerview
+        randomRecyclerView = (RecyclerView) findViewById(R.id.random_RV);
+        //
+        randomRecyclerView.setHasFixedSize(true);
+
+        // use a grid layout manager
+        randomRecyclerView.setLayoutManager(new GridLayoutManager(this, 2));
+
+        //
+        randAdapter = new RandomDesAdapter(getData());
+        randomRecyclerView.setAdapter(randAdapter);
+
+
+    }
+
+    public List<Desaparecidos> getData() {
+
+        List<Desaparecidos> userModels = new ArrayList<>();
+        userModels.add(new Desaparecidos("Gustavo Díaz", "Guadalajara", "21", R.drawable.img_face));
+        userModels.add(new Desaparecidos("Luis Torres", "Guadalajara", "20", R.drawable.img_face));
+        userModels.add(new Desaparecidos("Andy Jimenez", "Guadalajara", "20", R.drawable.img_face));
+        userModels.add(new Desaparecidos("Chiwis P3", "Guadalajara", "20", R.drawable.img_face));
+
+        return userModels;
+    }
+}

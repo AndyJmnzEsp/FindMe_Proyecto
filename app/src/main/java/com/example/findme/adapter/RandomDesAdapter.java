@@ -14,26 +14,25 @@ import com.example.findme.R;
 
 import java.util.List;
 
-public class RecientesAdapter extends RecyclerView.Adapter<RecientesAdapter.ViewHolder> {
-
+public class RandomDesAdapter extends RecyclerView.Adapter<RandomDesAdapter.ViewHolder> {
     private List<Desaparecidos> desList;
 
-    public RecientesAdapter(List<Desaparecidos> desList) {
+    public RandomDesAdapter(List<Desaparecidos> desList) {
         this.desList = desList;
     }
 
     @NonNull
 
     @Override
-    public RecientesAdapter.ViewHolder onCreateViewHolder(@NonNull ViewGroup parent, int viewType) {
+    public RandomDesAdapter.ViewHolder onCreateViewHolder(@NonNull ViewGroup parent, int viewType) {
 
-        View v = LayoutInflater.from(parent.getContext()).inflate(R.layout.item_desaparecidos, parent, false);
-        ViewHolder viewHolder = new ViewHolder(v);
+        View v = LayoutInflater.from(parent.getContext()).inflate(R.layout.item_rand_desaparecidos, parent, false);
+        RandomDesAdapter.ViewHolder viewHolder = new RandomDesAdapter.ViewHolder(v);
         return viewHolder;
     }
 
     @Override
-    public void onBindViewHolder(@NonNull RecientesAdapter.ViewHolder holder, int position) {
+    public void onBindViewHolder(@NonNull RandomDesAdapter.ViewHolder holder, int position) {
         String name = desList.get(position).getNombreDes();
         int img = desList.get(position).getImagenDes();
         String ciudad = desList.get(position).getCiudad();
@@ -64,6 +63,4 @@ public class RecientesAdapter extends RecyclerView.Adapter<RecientesAdapter.View
 
         }
     }
-
-
 }
