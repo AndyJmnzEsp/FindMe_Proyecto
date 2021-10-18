@@ -1,32 +1,40 @@
-<?xml version="1.0" encoding="utf-8"?>
 <androidx.constraintlayout.widget.ConstraintLayout xmlns:android="http://schemas.android.com/apk/res/android"
     xmlns:app="http://schemas.android.com/apk/res-auto"
     xmlns:tools="http://schemas.android.com/tools"
-    android:id="@+id/fragment_muro"
+    android:id="@+id/activity_muro"
     android:layout_width="match_parent"
     android:layout_height="match_parent"
     android:background="@color/white"
-    tools:context=".ui.Muro.MuroFragment">
+    tools:context=".MainActivity">
+
 
     <RelativeLayout
         android:layout_width="match_parent"
-        android:layout_height="match_parent">
+        android:layout_height="match_parent"
+        tools:layout_editor_absoluteX="0dp"
+        tools:layout_editor_absoluteY="-16dp">
 
         <RelativeLayout
+            android:id="@+id/separation"
             android:layout_width="match_parent"
-            android:layout_height="80dp"
-            android:background="@color/black" />
+            android:layout_height="70dp"
+            />
+
+        <View
+            android:id="@+id/divider"
+            style="@style/Divider"
+            android:layout_below="@+id/separation" />
 
         <LinearLayout
             android:id="@+id/search_container"
             android:layout_width="match_parent"
-            android:layout_height="50dp"
+            android:layout_height="40dp"
             android:layout_marginStart="25dp"
-            android:layout_marginTop="65dp"
+            android:layout_marginTop="20dp"
             android:layout_marginEnd="25dp"
-            android:layout_marginBottom="20dp"
+            android:layout_marginBottom="10dp"
             android:background="@drawable/bg_search"
-            android:elevation="20dp"
+            android:elevation="10dp"
             android:gravity="center_vertical"
             android:orientation="vertical">
 
@@ -34,24 +42,66 @@
                 android:layout_width="match_parent"
                 android:layout_height="wrap_content"
                 android:theme="@style/SearchView"
-                app:iconifiedByDefault="true"
+                app:iconifiedByDefault="false"
                 app:queryBackground="@android:color/transparent"
-                app:queryHint="Búsqueda por Nombre" />
+                app:queryHint="Buscar por nombre" />
 
         </LinearLayout>
+
+        <TextView
+            android:id="@+id/text_recientes"
+            android:layout_width="wrap_content"
+            android:layout_height="20dp"
+            android:layout_below="@+id/divider"
+            android:layout_marginStart="30dp"
+            android:layout_marginTop="10dp"
+            android:fontFamily="@font/verdana"
+            android:text="Reportes recientes"
+            android:textColor="@color/black"
+            android:textSize="15dp"
+            android:textStyle="bold" />
 
 
         <androidx.recyclerview.widget.RecyclerView
             android:id="@+id/recent_RV"
             android:layout_width="match_parent"
-            android:layout_height="match_parent"
-            android:layout_below="@+id/search_container"
-            android:background="@color/black"
+            android:layout_height="220dp"
+            android:layout_below="@+id/text_recientes"
             android:clickable="true"
+            android:focusable="true"
             android:scrollbars="horizontal">
 
+        </androidx.recyclerview.widget.RecyclerView>
+
+        <View
+            style="@style/Divider"
+            android:layout_above="@+id/text_random" />
+
+        <TextView
+            android:id="@+id/text_random"
+            android:layout_width="wrap_content"
+            android:layout_height="20dp"
+            android:layout_below="@+id/recent_RV"
+            android:layout_marginStart="30dp"
+            android:layout_marginTop="10dp"
+            android:fontFamily="@font/verdana"
+            android:text="Reportes desctacados"
+            android:textColor="@color/black"
+            android:textSize="15dp"
+            android:textStyle="bold" />
+
+        <androidx.recyclerview.widget.RecyclerView
+            android:id="@+id/random_RV"
+            android:layout_marginStart="15dp"
+            android:layout_width="match_parent"
+            android:layout_height="match_parent"
+            android:layout_below="@+id/text_random"
+            android:clickable="true"
+            android:focusable="true"
+            android:scrollbars="vertical">
 
         </androidx.recyclerview.widget.RecyclerView>
+
 
     </RelativeLayout>
 
