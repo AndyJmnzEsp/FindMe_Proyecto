@@ -7,8 +7,9 @@
 
     <fragment
         android:id="@+id/nav_buzon"
-        android:name="com.example.findme.ui.Reportes.ReportesFragment"        android:label="@string/menu_buzon"
-        tools:layout="@layout/fragment_buzon" />
+        android:name="com.example.findme.ui.Reportes.ReportesFragment"
+        android:label="@string/menu_buzon"
+        tools:layout="@layout/fragment_reportes" />
 
     <fragment
         android:id="@+id/nav_ayuda"

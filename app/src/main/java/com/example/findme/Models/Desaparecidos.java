@@ -1,4 +1,4 @@
-package com.example.findme.Model;
+package com.example.findme.Models;
 
 public class Desaparecidos {
     private String nombreDes;

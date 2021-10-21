@@ -53,7 +53,7 @@ public class LoginActivity extends AppCompatActivity {
         login.setOnClickListener(new View.OnClickListener() {
             @Override
             public void onClick(View v) {
-                loginUser("http://192.168.0.16/findme/ingresar_usuario_normal.php");
+                loginUser("http://192.168.1.96/findme/ingresar_usuario_normal.php");
             }
         });
     }
@@ -96,7 +96,7 @@ public class LoginActivity extends AppCompatActivity {
 
     //Metodo para redireccionar al usuario
     public void ForgotPass(View view) {
-        Intent FP = new Intent(this, CheckInNormalActivity.class);
+        Intent FP = new Intent(this, PrincipalMuroActivity.class);
         startActivity(FP);
     }
     //Metodo para redireccionar al usuario

@@ -28,6 +28,7 @@ public class AutentificacionActivity extends AppCompatActivity {
         Telefono = (EditText) findViewById(R.id.telefono);
         CodigoPais = (CountryCodePicker) findViewById(R.id.Codigo_Pais);
         Enviar = (Button) findViewById(R.id.Enviar);
+        listeners();
     }
 
     private void listeners() {

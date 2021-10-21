@@ -8,6 +8,7 @@
         <entry key="..\:/Users/Are/Documents/GitHub/FindMe_Proyecto/app/src/main/res/drawable-v24/custom_edit_text_number.xml" value="0.2203125" />
         <entry key="..\:/Users/Are/Documents/GitHub/FindMe_Proyecto/app/src/main/res/drawable/bg_search.xml" value="0.2203125" />
         <entry key="..\:/Users/Are/Documents/GitHub/FindMe_Proyecto/app/src/main/res/drawable/custom_button_bordesmorado.xml" value="0.2203125" />
+        <entry key="..\:/Users/Are/Documents/GitHub/FindMe_Proyecto/app/src/main/res/drawable/custom_button_bordesverde.xml" value="0.2203125" />
         <entry key="..\:/Users/Are/Documents/GitHub/FindMe_Proyecto/app/src/main/res/drawable/custom_edit_text.xml" value="0.2203125" />
         <entry key="..\:/Users/Are/Documents/GitHub/FindMe_Proyecto/app/src/main/res/drawable/custom_gradient_background.xml" value="0.2203125" />
         <entry key="..\:/Users/Are/Documents/GitHub/FindMe_Proyecto/app/src/main/res/drawable/custom_line.xml" value="0.2203125" />
@@ -24,6 +25,7 @@
         <entry key="..\:/Users/Are/Documents/GitHub/FindMe_Proyecto/app/src/main/res/layout/activity_main.xml" value="0.13405797101449277" />
         <entry key="..\:/Users/Are/Documents/GitHub/FindMe_Proyecto/app/src/main/res/layout/activity_principal_muro.xml" value="0.25" />
         <entry key="..\:/Users/Are/Documents/GitHub/FindMe_Proyecto/app/src/main/res/layout/card_view_psicologo.xml" value="0.20416666666666666" />
+        <entry key="..\:/Users/Are/Documents/GitHub/FindMe_Proyecto/app/src/main/res/layout/content_main.xml" value="0.20416666666666666" />
         <entry key="..\:/Users/Are/Documents/GitHub/FindMe_Proyecto/app/src/main/res/layout/fragment_amigos.xml" value="0.20416666666666666" />
         <entry key="..\:/Users/Are/Documents/GitHub/FindMe_Proyecto/app/src/main/res/layout/fragment_ayuda.xml" value="0.20416666666666666" />
         <entry key="..\:/Users/Are/Documents/GitHub/FindMe_Proyecto/app/src/main/res/layout/fragment_buzon.xml" value="0.20416666666666666" />
@@ -31,9 +33,12 @@
         <entry key="..\:/Users/Are/Documents/GitHub/FindMe_Proyecto/app/src/main/res/layout/fragment_estadisticas.xml" value="0.20416666666666666" />
         <entry key="..\:/Users/Are/Documents/GitHub/FindMe_Proyecto/app/src/main/res/layout/fragment_miperfil.xml" value="0.20416666666666666" />
         <entry key="..\:/Users/Are/Documents/GitHub/FindMe_Proyecto/app/src/main/res/layout/fragment_muro.xml" value="0.20416666666666666" />
+        <entry key="..\:/Users/Are/Documents/GitHub/FindMe_Proyecto/app/src/main/res/layout/fragment_reportes.xml" value="0.20416666666666666" />
         <entry key="..\:/Users/Are/Documents/GitHub/FindMe_Proyecto/app/src/main/res/layout/item_desaparecidos.xml" value="0.25" />
         <entry key="..\:/Users/Are/Documents/GitHub/FindMe_Proyecto/app/src/main/res/layout/item_randDesaparecidos.xml" value="0.20416666666666666" />
         <entry key="..\:/Users/Are/Documents/GitHub/FindMe_Proyecto/app/src/main/res/layout/item_rand_desaparecidos.xml" value="0.20416666666666666" />
+        <entry key="..\:/Users/Are/Documents/GitHub/FindMe_Proyecto/app/src/main/res/menu/activity_main_drawer.xml" value="0.20416666666666666" />
+        <entry key="..\:/Users/Are/Documents/GitHub/FindMe_Proyecto/app/src/main/res/menu/bottom_navigation_menu.xml" value="0.20416666666666666" />
         <entry key="..\:/Users/Are/Documents/GitHub/FindMe_Proyecto/app/src/main/res/menu/menu.xml" value="0.20416666666666666" />
         <entry key="..\:/Users/Are/Documents/GitHub/FindMe_Proyecto/app/src/main/res/menu/options_menu.xml" value="0.20416666666666666" />
         <entry key="..\:/Users/Are/Documents/GitHub/FindMe_Proyecto/app/src/main/res/mipmap-anydpi-v26/ic_launcher.xml" value="0.2203125" />
